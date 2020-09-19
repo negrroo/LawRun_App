@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark_black"
+    android:padding="@dimen/primary_padding"
+    tools:ignore="HardcodedText,UseCompoundDrawables,ContentDescription">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/card_support">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/primary_dark"
+                app:cardCornerRadius="@dimen/card_radius">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/primary_padding">
+
+                    <TextView
+                        android:id="@+id/tv_about_us"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About Us"
+                        android:textColor="@color/e_balance"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginVertical="@dimen/primary_padding"
+                        android:text="LawRun Kernel Manager is companion app developed and maintained by @cyborg-kaka for the awesome LawRun kernel by @negrroo supporting Xiaomi-SDM845 devices. \n\nBut the app can be used with other kernels &amp; devices.\n\nCompatibility to other devices is not guaranteed though (Currently I'm working to make it compatible with any Device/Kernel/ROM.\n\nIf you like the idea please support the project by donating) \n\nAny amount of donation is appreciated and will cheer me up to make the app beast."
+
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_about_us" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/primary_padding"
+                app:cardBackgroundColor="@color/primary_dark"
+                app:cardCornerRadius="@dimen/card_radius">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/primary_padding">
+
+                    <TextView
+                        android:id="@+id/tv_upcoming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upcoming Features"
+                        android:textColor="@color/e_balance"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginVertical="@dimen/primary_padding"
+                        android:text="1. App Optimizer\n2. Apply On Boot\n3. Battery Amps Monitor\n4. Colored FPS Meter (PUBG Enemy Tracker)\n4. In-App Kernel Updater\n6. Per-App Profiles\n7. Per-App Thermal Profiles\n8. RIP NSG Support\n9. Your Suggestions :-)"
+
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_upcoming" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/primary_padding"
+                app:cardBackgroundColor="@color/primary_dark"
+                app:cardCornerRadius="@dimen/card_radius">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/primary_padding">
+
+                    <TextView
+                        android:id="@+id/tv_contact_devs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact Devs"
+                        android:textColor="@color/e_balance"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_contact_negrroo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/primary_padding"
+                        app:cardBackgroundColor="@color/primary_dark_black"
+                        app:cardCornerRadius="@dimen/card_radius">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/primary_padding"
+                            android:text="Kernel Developer"
+                            android:textColor="@color/battery"
+                            android:textSize="@dimen/text_medium"
+                            android:textStyle="bold" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_contact_cyborg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/secondary_padding"
+                        app:cardBackgroundColor="@color/primary_dark_black"
+                        app:cardCornerRadius="@dimen/card_radius">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/primary_padding"
+                            android:text="App Developer"
+                            android:textColor="@color/e_balance"
+                            android:textSize="@dimen/text_medium"
+                            android:textStyle="bold" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/primary_padding"
+        app:cardBackgroundColor="@color/primary_dark"
+        app:cardCornerRadius="@dimen/card_radius">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/primary_padding">
+
+            <TextView
+                android:id="@+id/tv_support_us"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Support Us"
+                android:textColor="@color/e_balance"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/primary_padding"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_support_negrroo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/secondary_padding"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/battery"
+                    app:cardCornerRadius="@dimen/card_radius">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/primary_padding"
+                        android:text="KERNEL"
+                        android:textColor="@color/primary_dark"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_support_cyborg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/secondary_padding"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/e_balance"
+                    app:cardCornerRadius="@dimen/card_radius">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/primary_padding"
+                        android:text="APP"
+                        android:textColor="@color/primary_dark"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

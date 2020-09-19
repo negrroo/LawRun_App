@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="primary_padding">16dp</dimen>
+    <dimen name="secondary_padding">8dp</dimen>
+
+    <dimen name="card_radius">20dp</dimen>
+
+    <dimen name="profile_icons_size">40dp</dimen>
+
+    <dimen name="tab_indicator_height">2dp</dimen>
+    <dimen name="tab_indicator_width">40dp</dimen>
+
+    <dimen name="text_large">26sp</dimen>
+    <dimen name="text_medium">18sp</dimen>
+    <dimen name="text_small">16sp</dimen>
+
+    <!-- splash!-->
+    <dimen name="splash_rock_height">230dp</dimen>
+    <dimen name="splash_logo_width">250dp</dimen>
+    <dimen name="splash_text_logo_height">45dp</dimen>
+    <dimen name="splash_text_logo_bottom_margin">210dp</dimen>
+</resources>

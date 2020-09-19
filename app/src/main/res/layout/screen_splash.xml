@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pure_black"
+    tools:context="cyborg.kaka.lawrun.SplashScreen"
+    tools:ignore="ContentDescription">
+
+    <ImageView
+        android:layout_width="@dimen/splash_logo_width"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:srcCompat="@mipmap/ic_logo" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/splash_rock_height"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@mipmap/ic_splash_botttom" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/splash_text_logo_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/splash_text_logo_bottom_margin"
+        app:srcCompat="@mipmap/ic_logo_text" />
+</RelativeLayout>

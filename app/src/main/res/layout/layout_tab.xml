@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_tab_layout"
+    android:paddingHorizontal="@dimen/primary_padding"
+    android:paddingTop="@dimen/primary_padding"
+    android:paddingBottom="@dimen/secondary_padding"
+    tools:ignore="HardcodedText,ContentDescription">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/app_name"
+        android:textColor="@color/text_dark"
+
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/tab_heart"
+        android:layout_width="@dimen/profile_icons_size"
+        android:layout_height="@dimen/profile_icons_size"
+
+        android:src="@mipmap/ic_heart_ebalance"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tab_profiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/primary_padding"
+        android:text="Profiles"
+        android:textColor="@color/e_balance"
+
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_heart" />
+
+    <TextView
+        android:id="@+id/tab_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="@dimen/primary_padding"
+        android:text="Statistics"
+        android:textColor="@color/text_dark"
+
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tab_profiles"
+        app:layout_constraintTop_toBottomOf="@+id/tab_heart" />
+
+    <TextView
+        android:id="@+id/tab_kernel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="@dimen/primary_padding"
+        android:text="Kernel"
+        android:textColor="@color/text_dark"
+
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tab_stats"
+        app:layout_constraintTop_toBottomOf="@+id/tab_heart" />
+
+    <View
+        android:id="@+id/tab_indicator"
+        android:layout_width="@dimen/tab_indicator_width"
+        android:layout_height="@dimen/tab_indicator_height"
+
+        android:layout_marginTop="@dimen/secondary_padding"
+        android:background="@drawable/shape_tab_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/tab_profiles"
+        app:layout_constraintStart_toStartOf="@+id/tab_profiles"
+
+        app:layout_constraintTop_toBottomOf="@+id/tab_profiles" />
+
+    <View
+        android:id="@+id/tab_indicator_stats"
+        android:layout_width="@dimen/tab_indicator_width"
+        android:layout_height="@dimen/tab_indicator_height"
+
+        android:layout_marginTop="@dimen/secondary_padding"
+        android:background="@drawable/shape_tab_indicator"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/tab_stats"
+
+        app:layout_constraintStart_toStartOf="@+id/tab_stats"
+        app:layout_constraintTop_toBottomOf="@+id/tab_stats" />
+
+    <View
+        android:id="@+id/tab_indicator_kernel"
+        android:layout_width="@dimen/tab_indicator_width"
+        android:layout_height="@dimen/tab_indicator_height"
+
+        android:layout_marginTop="@dimen/secondary_padding"
+        android:background="@drawable/shape_tab_indicator"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/tab_kernel"
+
+        app:layout_constraintStart_toStartOf="@+id/tab_kernel"
+        app:layout_constraintTop_toBottomOf="@+id/tab_kernel" />
+
+    <TextView
+        android:id="@+id/tab_color_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/e_balance"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/tab_kernel"
+        app:layout_constraintStart_toStartOf="@+id/tab_kernel"
+        app:layout_constraintTop_toBottomOf="@+id/tab_kernel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

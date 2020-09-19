@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark_black"
+    android:padding="@dimen/primary_padding"
+    tools:ignore="HardcodedText,UseCompoundDrawables,ContentDescription">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/primary_dark"
+            app:cardCornerRadius="@dimen/card_radius">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/primary_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Device"
+                    android:textColor="@color/text_dark"
+
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_device_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:maxLength="25"
+                    android:text="POCO F1"
+
+                    android:textColor="@color/e_balance"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/devider_info_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tab_indicator_height"
+
+                    android:layout_marginTop="@dimen/secondary_padding"
+                    android:background="@color/devider_dark_semi_trans"
+
+                    app:layout_constraintTop_toBottomOf="@+id/tv_device_name" />
+
+                <TextView
+                    android:id="@+id/tv_info_kernel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/secondary_padding"
+                    android:text="Kernel"
+                    android:textColor="@color/text_dark"
+
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/devider_info_1"
+                    app:layout_constraintTop_toBottomOf="@+id/devider_info_1" />
+
+                <TextView
+                    android:id="@+id/tv_kernel_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/secondary_padding"
+                    android:maxLength="25"
+                    android:text="LawRun v-13-B1-S (60Hz)"
+
+                    android:textColor="@color/e_balance"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/devider_info_1" />
+
+                <View
+                    android:id="@+id/devider_info_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tab_indicator_height"
+
+                    android:layout_marginTop="@dimen/secondary_padding"
+                    android:background="@color/devider_dark_semi_trans"
+
+                    app:layout_constraintTop_toBottomOf="@+id/tv_kernel_name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/secondary_padding"
+                    android:text="LawRun Manager"
+                    android:textColor="@color/text_dark"
+
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/devider_info_2"
+                    app:layout_constraintTop_toBottomOf="@+id/devider_info_2" />
+
+                <TextView
+                    android:id="@+id/tv_lkm_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/secondary_padding"
+                    android:text="v1.1"
+                    android:textColor="@color/e_balance"
+
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintEnd_toEndOf="@+id/devider_info_2"
+                    app:layout_constraintTop_toBottomOf="@+id/devider_info_2" />
+
+                <View
+                    android:id="@+id/devider_info_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tab_indicator_height"
+
+                    android:layout_marginTop="@dimen/secondary_padding"
+                    android:background="@color/devider_dark_semi_trans"
+
+                    app:layout_constraintTop_toBottomOf="@+id/tv_lkm_version" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/secondary_padding"
+                    android:text="Battery Temp"
+                    android:textColor="@color/text_dark"
+
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/devider_info_3"
+                    app:layout_constraintTop_toBottomOf="@+id/devider_info_3" />
+
+                <TextView
+                    android:id="@+id/tv_battery_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/secondary_padding"
+                    android:text="40°C"
+                    android:textColor="@color/e_balance"
+
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/devider_info_3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/profiles_not_supported"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/primary_padding"
+            android:text="@string/profile_not_supported_msg"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_large"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/profiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_battery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/primary_padding"
+                app:cardBackgroundColor="@color/primary_dark"
+                app:cardCornerRadius="@dimen/card_radius">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/primary_padding">
+
+                    <ImageView
+                        android:layout_width="@dimen/profile_icons_size"
+                        android:layout_height="@dimen/profile_icons_size"
+                        app:srcCompat="@mipmap/ic_battery_dark" />
+
+                    <TextView
+                        android:id="@+id/tv_battery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/primary_padding"
+                        android:text="@string/battery"
+                        android:textColor="@color/battery"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/secondary_padding"
+                app:cardBackgroundColor="@color/primary_dark"
+                app:cardCornerRadius="@dimen/card_radius">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/primary_padding">
+
+                    <ImageView
+                        android:layout_width="@dimen/profile_icons_size"
+                        android:layout_height="@dimen/profile_icons_size"
+                        app:srcCompat="@mipmap/ic_balance_dark" />
+
+                    <TextView
+                        android:id="@+id/tv_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/primary_padding"
+                        android:text="@string/balance"
+                        android:textColor="@color/balance"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_ebalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/secondary_padding"
+                app:cardBackgroundColor="@color/primary_dark"
+                app:cardCornerRadius="@dimen/card_radius">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/primary_padding">
+
+                    <ImageView
+                        android:layout_width="@dimen/profile_icons_size"
+                        android:layout_height="@dimen/profile_icons_size"
+                        app:srcCompat="@mipmap/ic_ebalance_dark" />
+
+                    <TextView
+                        android:id="@+id/tv_ebalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/primary_padding"
+                        android:text="@string/extra_balance"
+                        android:textColor="@color/e_balance"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_performance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/secondary_padding"
+                app:cardBackgroundColor="@color/primary_dark"
+                app:cardCornerRadius="@dimen/card_radius">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/primary_padding">
+
+                    <ImageView
+                        android:layout_width="@dimen/profile_icons_size"
+                        android:layout_height="@dimen/profile_icons_size"
+                        app:srcCompat="@mipmap/ic_performance_dark" />
+
+                    <TextView
+                        android:id="@+id/tv_performance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/primary_padding"
+                        android:text="@string/performance"
+                        android:textColor="@color/performance"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_gaming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/secondary_padding"
+                app:cardBackgroundColor="@color/primary_dark"
+                app:cardCornerRadius="@dimen/card_radius">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/primary_padding">
+
+                    <ImageView
+                        android:layout_width="@dimen/profile_icons_size"
+                        android:layout_height="@dimen/profile_icons_size"
+                        app:srcCompat="@mipmap/ic_gaming_dark" />
+
+                    <TextView
+                        android:id="@+id/tv_gaming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/primary_padding"
+                        android:text="@string/gaming"
+                        android:textColor="@color/gaming"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

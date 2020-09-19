@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "cyborg.kaka.lawrun"
+        minSdkVersion 28
+        targetSdkVersion 30
+        versionCode 3
+        versionName "1.2"
+        resConfigs "en"
+        resConfigs "xxhdpi"
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include "arm64-v8a"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility "1.8"
+        targetCompatibility "1.8"
+    }
+}
+repositories {
+    maven { url 'https://jitpack.io' }
+    mavenCentral()
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.github.topjohnwu.libsu:core:3.0.2'
+    implementation 'com.github.topjohnwu.libsu:io:3.0.2'
+}

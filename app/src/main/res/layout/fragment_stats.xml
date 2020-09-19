@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark_black"
+    android:orientation="vertical"
+    android:padding="@dimen/primary_padding"
+    tools:ignore="HardcodedText,UseCompoundDrawables,ContentDescription">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/primary_dark"
+        app:cardCornerRadius="@dimen/card_radius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/primary_padding">
+
+            <TextView
+                android:id="@+id/tv_fps_meter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="FPS Meter"
+                android:textColor="@color/e_balance"
+
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_fps_meter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginVertical="@dimen/primary_padding"
+                android:text="Show on going FPS count in a overlay"
+
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fps_meter_title" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/primary_padding"
+        app:cardBackgroundColor="@color/primary_dark"
+        app:cardCornerRadius="@dimen/card_radius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/primary_padding">
+
+            <TextView
+                android:id="@+id/tv_battery_monitor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Battery Monitor"
+                android:textColor="@color/e_balance"
+
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_battery_monitor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginVertical="@dimen/primary_padding"
+                android:text="Show charging / discharging speed in notification"
+
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintTop_toBottomOf="@+id/tv_battery_monitor" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LawRun</string>
+    <string name="extra_balance">Extra Balance</string>
+    <string name="battery">Battery</string>
+    <string name="balance">Balance</string>
+    <string name="performance">Performance</string>
+    <string name="gaming">Gaming</string>
+    <string name="profile_not_supported_msg">LawRun Profiles not installed !</string>
+    <string name="law_profile">Law Profile</string>
+</resources>

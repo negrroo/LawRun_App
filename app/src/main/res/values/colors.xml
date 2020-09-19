@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_dark">#202125</color>
+    <color name="primary_dark_black">#131416</color>
+    <color name="text_dark">#666666</color>
+    <color name="devider_dark_semi_trans">#40666666</color>
+
+    <color name="battery">#109D58</color>
+    <color name="balance">#65C3AB</color>
+    <color name="e_balance">#229ACE</color>
+    <color name="performance">#FEAC22</color>
+    <color name="gaming">#DC5D54</color>
+
+    <color name="pure_white">#FFFFFF</color>
+    <color name="pure_black">#000000</color>
+</resources>
