@@ -8,14 +8,14 @@ android {
         applicationId "cyborg.kaka.lawrun"
         minSdkVersion 28
         targetSdkVersion 30
-        versionCode 3
-        versionName "1.2"
+        versionCode 4
+        versionName "1.3"
         resConfigs "en"
         resConfigs "xxhdpi"
     }
 
-    viewBinding {
-        enabled = true
+    buildFeatures {
+        viewBinding  = true
     }
 
     splits {
@@ -45,8 +45,9 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.github.topjohnwu.libsu:core:3.0.2'
     implementation 'com.github.topjohnwu.libsu:io:3.0.2'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
 }

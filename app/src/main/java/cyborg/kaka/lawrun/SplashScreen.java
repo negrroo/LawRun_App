@@ -7,6 +7,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static cyborg.kaka.lawrun.Utility.Utils.updateCheck;
+
 public class SplashScreen extends AppCompatActivity {
 
     @Override
@@ -19,6 +21,9 @@ public class SplashScreen extends AppCompatActivity {
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
+
+        // Check for update
+        updateCheck(SplashScreen.this);
 
         // Start Profile Screen
         new Handler().postDelayed(() -> {

@@ -10,7 +10,7 @@ public class Constants {
     public static int PROFILE_GAMING = 4;
 
     // PUBGM
-    public static String PUBG_GFX_FILE = "/data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/UserCustom.ini";
+    public static String PUBG_HDR_FILE = "/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/EnjoyCJZC.ini";
 
     // Stats
     public static String MEASURED_FPS_FILE = "/sys/class/drm/sde-crtc-0/measured_fps";
@@ -19,4 +19,7 @@ public class Constants {
     public static String CHARGING_MAX_FILE = "/sys/class/power_supply/battery/constant_charge_current_max";
     public static String BATTERY_THERMAL_COOL_FILE = "/sys/class/power_supply/bms/temp_cool";
     public static String BATTERY_THERMAL_WARM_FILE = "/sys/class/power_supply/bms/temp_warm";
+
+    // Update
+    public static String UPDATE_URL = "https://raw.githubusercontent.com/cyborg-kaka/LawRun-Version/main/README.md";
 }

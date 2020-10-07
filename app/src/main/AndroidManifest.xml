@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="cyborg.kaka.lawrun">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
@@ -19,24 +20,12 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name="MainScreen"
             android:screenOrientation="portrait" />
-        <activity
-            android:name="HDRExtremeScreen"
-            android:icon="@mipmap/ic_hdr"
-            android:label="HDR Extreme"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <service
             android:name=".Services.ProfileTile"

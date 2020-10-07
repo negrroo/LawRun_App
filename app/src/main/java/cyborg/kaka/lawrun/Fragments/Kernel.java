@@ -22,6 +22,7 @@ import cyborg.kaka.lawrun.databinding.FragmentKernelBinding;
 import static cyborg.kaka.lawrun.Utility.Constants.BATTERY_THERMAL_COOL_FILE;
 import static cyborg.kaka.lawrun.Utility.Constants.BATTERY_THERMAL_WARM_FILE;
 import static cyborg.kaka.lawrun.Utility.Constants.CHARGING_MAX_FILE;
+import static cyborg.kaka.lawrun.Utility.Constants.PUBG_HDR_FILE;
 
 public class Kernel extends Fragment {
 
@@ -50,10 +51,23 @@ public class Kernel extends Fragment {
             getBatteryThermal();
         });
 
+        // HDR Extreme Switch Listener
+        kernel_fragment.switchHdrExtreme.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (Utils.rootCheck(getActivity())) {
+                if (isChecked) {
+                    ShellUtils.fastCmd("cp -a " + ShellUtils.fastCmd("getprop lawrun.hdr_extreme_path") + " " + PUBG_HDR_FILE);
+                    return;
+                }
+                ShellUtils.fastCmd("rm " + PUBG_HDR_FILE);
+            }
+            getHDRExteme();
+        });
+
         // Init Views & Colors
         resetColors();
         getAppliedAmps();
         getBatteryThermal();
+        getHDRExteme();
 
         return kernel_fragment.getRoot();
     }
@@ -91,7 +105,7 @@ public class Kernel extends Fragment {
         // Change Card Title Colors To Theme
         kernel_fragment.chargingSpeed.setTextColor(themeColor);
         kernel_fragment.tvBatteryThermalRemover.setTextColor(themeColor);
-        kernel_fragment.perAppThermal.setTextColor(themeColor);
+        kernel_fragment.tvHdrExtreme.setTextColor(themeColor);
     }
 
     // Initiate Current Amps Card
@@ -131,6 +145,13 @@ public class Kernel extends Fragment {
         }
     }
 
+    // Initiate HDR Extreme Switch
+    private void getHDRExteme() {
+        if (SuFile.open(PUBG_HDR_FILE).exists()) {
+            kernel_fragment.switchHdrExtreme.setChecked(true);
+        }
+    }
+
     // Refresh Fragment
     @Override
     public void onResume() {
@@ -138,5 +159,6 @@ public class Kernel extends Fragment {
         resetColors();
         getAppliedAmps();
         getBatteryThermal();
+        getHDRExteme();
     }
 }
