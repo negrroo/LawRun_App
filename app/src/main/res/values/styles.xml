@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/primary_dark</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
-        <item name="colorAccent">@color/e_balance</item>
+        <item name="colorAccent">@color/e_balance_2800ma</item>
         <item name="android:navigationBarColor">@color/primary_dark</item>
         <item name="android:fontFamily">@font/mi_lan</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>

@@ -121,46 +121,46 @@ public class Profiles extends Fragment {
     private void resetColors() {
         // Reset All Colors
         binding.cardBalance.setCardBackgroundColor(Objects.requireNonNull(getActivity()).getColor(R.color.primary_dark));
-        binding.tvBattery.setTextColor(getActivity().getColor(R.color.battery));
+        binding.tvBattery.setTextColor(getActivity().getColor(R.color.battery_1800ma));
         binding.cardBattery.setCardBackgroundColor(getActivity().getColor(R.color.primary_dark));
-        binding.tvBalance.setTextColor(getActivity().getColor(R.color.balance));
+        binding.tvBalance.setTextColor(getActivity().getColor(R.color.balance_2300ma));
         binding.cardEbalance.setCardBackgroundColor(getActivity().getColor(R.color.primary_dark));
-        binding.tvEbalance.setTextColor(getActivity().getColor(R.color.e_balance));
+        binding.tvEbalance.setTextColor(getActivity().getColor(R.color.e_balance_2800ma));
         binding.cardPerformance.setCardBackgroundColor(getActivity().getColor(R.color.primary_dark));
-        binding.tvPerformance.setTextColor(getActivity().getColor(R.color.performance));
+        binding.tvPerformance.setTextColor(getActivity().getColor(R.color.performance_3300ma));
         binding.cardGaming.setCardBackgroundColor(getActivity().getColor(R.color.primary_dark));
-        binding.tvGaming.setTextColor(getActivity().getColor(R.color.gaming));
+        binding.tvGaming.setTextColor(getActivity().getColor(R.color.gaming_3500ma));
 
         // Get Current Applied Theme Color
         String profile = ShellUtils.fastCmd("getprop persist.lawrun.profile");
 
         // Init Default Colors
-        int theme_color = getActivity().getColor(R.color.e_balance),
+        int theme_color = getActivity().getColor(R.color.e_balance_2800ma),
                 default_dark_color = getActivity().getColor(R.color.primary_dark_black);
 
         // Check & Apply Colors
         if (profile.equals(String.valueOf(PROFILE_BATTERY))) {
-            theme_color = getActivity().getColor(R.color.battery);
+            theme_color = getActivity().getColor(R.color.battery_1800ma);
             binding.cardBattery.setCardBackgroundColor(theme_color);
             binding.tvBattery.setTextColor(default_dark_color);
             tab_heart.setImageResource(R.mipmap.ic_heart_battery);
         } else if (profile.equals(String.valueOf(PROFILE_BALANCE))) {
-            theme_color = getActivity().getColor(R.color.balance);
+            theme_color = getActivity().getColor(R.color.balance_2300ma);
             binding.cardBalance.setCardBackgroundColor(theme_color);
             binding.tvBalance.setTextColor(default_dark_color);
             tab_heart.setImageResource(R.mipmap.ic_heart_balance);
         } else if (profile.equals(String.valueOf(PROFILE_EXTRA_BALANCE))) {
-            theme_color = getActivity().getColor(R.color.e_balance);
+            theme_color = getActivity().getColor(R.color.e_balance_2800ma);
             binding.cardEbalance.setCardBackgroundColor(theme_color);
             binding.tvEbalance.setTextColor(default_dark_color);
             tab_heart.setImageResource(R.mipmap.ic_heart_ebalance);
         } else if (profile.equals(String.valueOf(PROFILE_PERFORMANCE))) {
-            theme_color = getActivity().getColor(R.color.performance);
+            theme_color = getActivity().getColor(R.color.performance_3300ma);
             binding.cardPerformance.setCardBackgroundColor(theme_color);
             binding.tvPerformance.setTextColor(default_dark_color);
             tab_heart.setImageResource(R.mipmap.ic_heart_performance);
         } else if (profile.equals(String.valueOf(PROFILE_GAMING))) {
-            theme_color = getActivity().getColor(R.color.gaming);
+            theme_color = getActivity().getColor(R.color.gaming_3500ma);
             binding.cardGaming.setCardBackgroundColor(theme_color);
             binding.tvGaming.setTextColor(default_dark_color);
             tab_heart.setImageResource(R.mipmap.ic_heart_gaming);

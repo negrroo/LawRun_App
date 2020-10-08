@@ -40,7 +40,7 @@
 
         android:layout_marginTop="@dimen/primary_padding"
         android:text="Profiles"
-        android:textColor="@color/e_balance"
+        android:textColor="@color/e_balance_2800ma"
 
         android:textSize="@dimen/text_medium"
         android:textStyle="bold"
@@ -118,7 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:textColor="@color/e_balance"
+        android:textColor="@color/e_balance_2800ma"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/tab_kernel"
         app:layout_constraintStart_toStartOf="@+id/tab_kernel"

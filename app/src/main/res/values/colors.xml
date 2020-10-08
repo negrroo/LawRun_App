@@ -5,11 +5,12 @@
     <color name="text_dark">#666666</color>
     <color name="devider_dark_semi_trans">#40666666</color>
 
-    <color name="battery">#109D58</color>
-    <color name="balance">#65C3AB</color>
-    <color name="e_balance">#229ACE</color>
-    <color name="performance">#FEAC22</color>
-    <color name="gaming">#DC5D54</color>
+    <color name="battery_1800ma">#109D58</color>
+    <color name="balance_2300ma">#65C3AB</color>
+    <color name="e_balance_2800ma">#229ACE</color>
+    <color name="charge_3000ma">#d3d440</color>
+    <color name="performance_3300ma">#FEAC22</color>
+    <color name="gaming_3500ma">#DC5D54</color>
 
     <color name="pure_white">#FFFFFF</color>
     <color name="pure_black">#000000</color>

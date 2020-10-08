@@ -32,6 +32,8 @@ public class Kernel extends Fragment {
         kernel_fragment = FragmentKernelBinding.inflate(inflater, container, false);
 
         // Charging Amps Card OnClick
+        kernel_fragment.card1800.setOnClickListener(v -> setChargingSpeed(1800));
+        kernel_fragment.card2300.setOnClickListener(v -> setChargingSpeed(2300));
         kernel_fragment.card2800.setOnClickListener(v -> setChargingSpeed(2800));
         kernel_fragment.card3000.setOnClickListener(v -> setChargingSpeed(3000));
         kernel_fragment.card3300.setOnClickListener(v -> setChargingSpeed(3300));
@@ -87,15 +89,19 @@ public class Kernel extends Fragment {
     // Reset Colors
     private void resetColors() {
         // Card Default Colors
-        kernel_fragment.card2800.setCardBackgroundColor(Objects.requireNonNull(getActivity()).getColor(R.color.primary_dark_black));
+        kernel_fragment.card1800.setCardBackgroundColor(Objects.requireNonNull(getActivity()).getColor(R.color.primary_dark_black));
+        kernel_fragment.card2300.setCardBackgroundColor(getActivity().getColor(R.color.primary_dark_black));
+        kernel_fragment.card2800.setCardBackgroundColor(getActivity().getColor(R.color.primary_dark_black));
         kernel_fragment.card3000.setCardBackgroundColor(getActivity().getColor(R.color.primary_dark_black));
         kernel_fragment.card3300.setCardBackgroundColor(getActivity().getColor(R.color.primary_dark_black));
         kernel_fragment.card3500.setCardBackgroundColor(getActivity().getColor(R.color.primary_dark_black));
 
-        kernel_fragment.tv2800.setTextColor(getActivity().getColor(R.color.battery));
-        kernel_fragment.tv3000.setTextColor(getActivity().getColor(R.color.e_balance));
-        kernel_fragment.tv3300.setTextColor(getActivity().getColor(R.color.performance));
-        kernel_fragment.tv3500.setTextColor(getActivity().getColor(R.color.gaming));
+        kernel_fragment.tv1800.setTextColor(getActivity().getColor(R.color.battery_1800ma));
+        kernel_fragment.tv2300.setTextColor(getActivity().getColor(R.color.balance_2300ma));
+        kernel_fragment.tv2800.setTextColor(getActivity().getColor(R.color.e_balance_2800ma));
+        kernel_fragment.tv3000.setTextColor(getActivity().getColor(R.color.charge_3000ma));
+        kernel_fragment.tv3300.setTextColor(getActivity().getColor(R.color.performance_3300ma));
+        kernel_fragment.tv3500.setTextColor(getActivity().getColor(R.color.gaming_3500ma));
 
         // GetTheme Color
         LinearLayout mainContainter = Objects.requireNonNull(getActivity()).findViewById(R.id.mainContainter);
@@ -110,25 +116,33 @@ public class Kernel extends Fragment {
 
     // Initiate Current Amps Card
     private void getAppliedAmps() {
-        if (!SuFile.open(CHARGING_MAX_FILE).exists() || Integer.parseInt(ShellUtils.fastCmd("cat " + CHARGING_MAX_FILE)) < 2800000) {
+        if (!SuFile.open(CHARGING_MAX_FILE).exists() || Integer.parseInt(ShellUtils.fastCmd("cat " + CHARGING_MAX_FILE)) < 1800000) {
             kernel_fragment.cardChargingSpeed.setVisibility(View.GONE);
             return;
         }
         switch (ShellUtils.fastCmd("cat " + CHARGING_MAX_FILE)) {
+            case "1800000":
+                kernel_fragment.card1800.setCardBackgroundColor(Objects.requireNonNull(getActivity()).getColor(R.color.battery_1800ma));
+                kernel_fragment.tv1800.setTextColor(getActivity().getColor(R.color.primary_dark));
+                break;
+            case "2300000":
+                kernel_fragment.card2300.setCardBackgroundColor(Objects.requireNonNull(getActivity()).getColor(R.color.balance_2300ma));
+                kernel_fragment.tv2300.setTextColor(getActivity().getColor(R.color.primary_dark));
+                break;
             case "2800000":
-                kernel_fragment.card2800.setCardBackgroundColor(Objects.requireNonNull(getActivity()).getColor(R.color.battery));
+                kernel_fragment.card2800.setCardBackgroundColor(Objects.requireNonNull(getActivity()).getColor(R.color.e_balance_2800ma));
                 kernel_fragment.tv2800.setTextColor(getActivity().getColor(R.color.primary_dark));
                 break;
             case "3000000":
-                kernel_fragment.card3000.setCardBackgroundColor(Objects.requireNonNull(getActivity()).getColor(R.color.e_balance));
+                kernel_fragment.card3000.setCardBackgroundColor(Objects.requireNonNull(getActivity()).getColor(R.color.charge_3000ma));
                 kernel_fragment.tv3000.setTextColor(getActivity().getColor(R.color.primary_dark));
                 break;
             case "3300000":
-                kernel_fragment.card3300.setCardBackgroundColor(Objects.requireNonNull(getActivity()).getColor(R.color.performance));
+                kernel_fragment.card3300.setCardBackgroundColor(Objects.requireNonNull(getActivity()).getColor(R.color.performance_3300ma));
                 kernel_fragment.tv3300.setTextColor(getActivity().getColor(R.color.primary_dark));
                 break;
             case "3500000":
-                kernel_fragment.card3500.setCardBackgroundColor(Objects.requireNonNull(getActivity()).getColor(R.color.gaming));
+                kernel_fragment.card3500.setCardBackgroundColor(Objects.requireNonNull(getActivity()).getColor(R.color.gaming_3500ma));
                 kernel_fragment.tv3500.setTextColor(getActivity().getColor(R.color.primary_dark));
                 break;
         }

@@ -17,7 +17,7 @@
         android:shadowDy="1"
         android:shadowRadius="2"
         android:text="@string/app_name"
-        android:textColor="@color/performance"
+        android:textColor="@color/performance_3300ma"
         android:textSize="16sp"
         android:textStyle="bold" />
 </FrameLayout>

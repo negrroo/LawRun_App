@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
 
                 android:text="FPS Meter"
-                android:textColor="@color/e_balance"
+                android:textColor="@color/e_balance_2800ma"
 
                 android:textSize="@dimen/text_medium"
                 app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
 
                 android:text="Battery Monitor"
-                android:textColor="@color/e_balance"
+                android:textColor="@color/e_balance_2800ma"
 
                 android:textSize="@dimen/text_medium"
                 app:layout_constraintStart_toStartOf="parent"

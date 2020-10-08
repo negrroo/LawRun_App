@@ -8,5 +8,5 @@
         android:topLeftRadius="@dimen/card_radius"
         android:topRightRadius="@dimen/card_radius" />
 
-    <solid android:color="@color/e_balance" />
+    <solid android:color="@color/e_balance_2800ma" />
 </shape>

@@ -31,10 +31,48 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Charging Speed"
-                    android:textColor="@color/e_balance"
+                    android:textColor="@color/e_balance_2800ma"
                     android:textSize="@dimen/text_medium"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_1800"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/primary_padding"
+                    app:cardBackgroundColor="@color/primary_dark_black"
+                    app:cardCornerRadius="@dimen/card_radius">
+
+                    <TextView
+                        android:id="@+id/tv_1800"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/primary_padding"
+                        android:text="1800mA"
+                        android:textColor="@color/battery_1800ma"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_2300"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/primary_padding"
+                    app:cardBackgroundColor="@color/primary_dark_black"
+                    app:cardCornerRadius="@dimen/card_radius">
+
+                    <TextView
+                        android:id="@+id/tv_2300"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/primary_padding"
+                        android:text="2300mA"
+                        android:textColor="@color/balance_2300ma"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card_2800"
@@ -50,7 +88,7 @@
                         android:layout_height="wrap_content"
                         android:padding="@dimen/primary_padding"
                         android:text="2800mA"
-                        android:textColor="@color/battery"
+                        android:textColor="@color/e_balance_2800ma"
                         android:textSize="@dimen/text_medium"
                         android:textStyle="bold" />
                 </androidx.cardview.widget.CardView>
@@ -69,7 +107,7 @@
                         android:layout_height="wrap_content"
                         android:padding="@dimen/primary_padding"
                         android:text="3000mA"
-                        android:textColor="@color/e_balance"
+                        android:textColor="@color/e_balance_2800ma"
                         android:textSize="@dimen/text_medium"
                         android:textStyle="bold" />
                 </androidx.cardview.widget.CardView>
@@ -88,7 +126,7 @@
                         android:layout_height="wrap_content"
                         android:padding="@dimen/primary_padding"
                         android:text="3300mA"
-                        android:textColor="@color/performance"
+                        android:textColor="@color/performance_3300ma"
                         android:textSize="@dimen/text_medium"
                         android:textStyle="bold" />
                 </androidx.cardview.widget.CardView>
@@ -107,7 +145,7 @@
                         android:layout_height="wrap_content"
                         android:padding="@dimen/primary_padding"
                         android:text="3500mA"
-                        android:textColor="@color/gaming"
+                        android:textColor="@color/gaming_3500ma"
                         android:textSize="@dimen/text_medium"
                         android:textStyle="bold" />
                 </androidx.cardview.widget.CardView>
@@ -134,7 +172,7 @@
                     android:layout_height="wrap_content"
 
                     android:text="Battery Thermal Remover"
-                    android:textColor="@color/e_balance"
+                    android:textColor="@color/e_balance_2800ma"
 
                     android:textSize="@dimen/text_medium"
                     app:layout_constraintStart_toStartOf="parent"
@@ -180,7 +218,7 @@
                     android:layout_height="wrap_content"
 
                     android:text="PUBG HDR Extreme"
-                    android:textColor="@color/e_balance"
+                    android:textColor="@color/e_balance_2800ma"
 
                     android:textSize="@dimen/text_medium"
                     app:layout_constraintStart_toStartOf="parent"

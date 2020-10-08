@@ -34,7 +34,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="About Us"
-                        android:textColor="@color/e_balance"
+                        android:textColor="@color/e_balance_2800ma"
                         android:textSize="@dimen/text_medium"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -70,7 +70,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Upcoming Features"
-                        android:textColor="@color/e_balance"
+                        android:textColor="@color/e_balance_2800ma"
                         android:textSize="@dimen/text_medium"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -107,7 +107,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Contact Devs"
-                        android:textColor="@color/e_balance"
+                        android:textColor="@color/e_balance_2800ma"
                         android:textSize="@dimen/text_medium"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -125,7 +125,7 @@
                             android:layout_height="wrap_content"
                             android:padding="@dimen/primary_padding"
                             android:text="Kernel Developer"
-                            android:textColor="@color/battery"
+                            android:textColor="@color/battery_1800ma"
                             android:textSize="@dimen/text_medium"
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
@@ -143,7 +143,7 @@
                             android:layout_height="wrap_content"
                             android:padding="@dimen/primary_padding"
                             android:text="App Developer"
-                            android:textColor="@color/e_balance"
+                            android:textColor="@color/e_balance_2800ma"
                             android:textSize="@dimen/text_medium"
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
@@ -172,7 +172,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Support Us"
-                android:textColor="@color/e_balance"
+                android:textColor="@color/e_balance_2800ma"
                 android:textSize="@dimen/text_medium"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -189,7 +189,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/secondary_padding"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="@color/battery"
+                    app:cardBackgroundColor="@color/battery_1800ma"
                     app:cardCornerRadius="@dimen/card_radius">
 
                     <TextView
@@ -209,7 +209,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/secondary_padding"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="@color/e_balance"
+                    app:cardBackgroundColor="@color/e_balance_2800ma"
                     app:cardCornerRadius="@dimen/card_radius">
 
                     <TextView

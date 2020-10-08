@@ -44,7 +44,7 @@
                     android:maxLength="25"
                     android:text="POCO F1"
 
-                    android:textColor="@color/e_balance"
+                    android:textColor="@color/e_balance_2800ma"
                     android:textSize="@dimen/text_small"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -82,7 +82,7 @@
                     android:maxLength="25"
                     android:text="LawRun v-13-B1-S (60Hz)"
 
-                    android:textColor="@color/e_balance"
+                    android:textColor="@color/e_balance_2800ma"
                     android:textSize="@dimen/text_small"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/devider_info_1" />
@@ -117,7 +117,7 @@
 
                     android:layout_marginTop="@dimen/secondary_padding"
                     android:text="v1.1"
-                    android:textColor="@color/e_balance"
+                    android:textColor="@color/e_balance_2800ma"
 
                     android:textSize="@dimen/text_small"
                     app:layout_constraintEnd_toEndOf="@+id/devider_info_2"
@@ -153,7 +153,7 @@
 
                     android:layout_marginTop="@dimen/secondary_padding"
                     android:text="40°C"
-                    android:textColor="@color/e_balance"
+                    android:textColor="@color/e_balance_2800ma"
 
                     android:textSize="@dimen/text_medium"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -202,7 +202,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/primary_padding"
                         android:text="@string/battery"
-                        android:textColor="@color/battery"
+                        android:textColor="@color/battery_1800ma"
                         android:textSize="@dimen/text_large" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -231,7 +231,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/primary_padding"
                         android:text="@string/balance"
-                        android:textColor="@color/balance"
+                        android:textColor="@color/balance_2300ma"
                         android:textSize="@dimen/text_large" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -260,7 +260,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/primary_padding"
                         android:text="@string/extra_balance"
-                        android:textColor="@color/e_balance"
+                        android:textColor="@color/e_balance_2800ma"
                         android:textSize="@dimen/text_large" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -289,7 +289,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/primary_padding"
                         android:text="@string/performance"
-                        android:textColor="@color/performance"
+                        android:textColor="@color/performance_3300ma"
                         android:textSize="@dimen/text_large" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -318,7 +318,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/primary_padding"
                         android:text="@string/gaming"
-                        android:textColor="@color/gaming"
+                        android:textColor="@color/gaming_3500ma"
                         android:textSize="@dimen/text_large" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
