@@ -147,6 +147,13 @@ public class Kernel extends Fragment {
 
     // Initiate HDR Extreme Switch
     private void getHDRExteme() {
+        if (ShellUtils.fastCmd("getprop lawrun.hdr_extreme_path").equals("")
+                || !SuFile.open(ShellUtils.fastCmd("getprop lawrun.hdr_extreme_path")).exists()
+                || !SuFile.open("/storage/emulated/0/Android/data/com.tencent.ig/").exists()
+        ) {
+            kernel_fragment.cardHdrExtreme.setVisibility(View.GONE);
+            return;
+        }
         if (SuFile.open(PUBG_HDR_FILE).exists()) {
             kernel_fragment.switchHdrExtreme.setChecked(true);
         }
