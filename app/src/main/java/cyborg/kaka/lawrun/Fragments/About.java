@@ -26,7 +26,7 @@ public class About extends Fragment {
 
         // Kernel Telegram
         binding.cardContactNegrroo.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tg://resolve?domain=Lawrunch"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tg://resolve?domain=negrroo1"));
             startActivity(intent);
         });
 
@@ -38,7 +38,7 @@ public class About extends Fragment {
 
         // Negrroo Paypal
         binding.cardSupportNegrroo.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.paypal.me/MohammedAElnaggar?locale.x=en_US"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.lawrun-kernel.ml/2020/08/donation-link.html"));
             startActivity(intent);
         });
 
