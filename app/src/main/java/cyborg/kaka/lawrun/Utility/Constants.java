@@ -21,5 +21,5 @@ public class Constants {
     public static String BATTERY_THERMAL_WARM_FILE = "/sys/class/power_supply/bms/temp_warm";
 
     // Update
-    public static String UPDATE_URL = "https://raw.githubusercontent.com/cyborg-kaka/LawRun-Version/main/README.md";
+    public static String UPDATE_URL = "https://raw.githubusercontent.com/cyborg-kaka/LawRun-Kernel-Manager/master/README.md";
 }
