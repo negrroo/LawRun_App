@@ -1,2 +1,2 @@
-rootProject.name='LawRun Kernel Manager'
 include ':app'
+rootProject.name = "LawRun"

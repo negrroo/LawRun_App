@@ -15,20 +15,19 @@
         android:supportsRtl="false"
         android:theme="@style/DarkTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,LockedOrientationActivity,InnerclassSeparator">
+        <activity android:name=".ui.MainActivity" />
         <activity
-            android:name="SplashScreen"
+            android:name=".ui.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="MainScreen"
-            android:screenOrientation="portrait" />
 
         <service
-            android:name=".Services.ProfileTile"
+            android:name=".services.ProfileTile"
             android:icon="@mipmap/ic_balance_tile"
             android:label="@string/law_profile"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -36,9 +35,8 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
-
         <service
-            android:name=".Services.FPSTile"
+            android:name=".services.FPSTile"
             android:icon="@mipmap/ic_fps_tile"
             android:label="FPS Meter"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -46,9 +44,8 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
-
         <service
-            android:name=".Services.FPS"
+            android:name=".services.FPS"
             android:configChanges="orientation" />
     </application>
 

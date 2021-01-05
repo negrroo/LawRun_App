@@ -1,248 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_dark_black"
+    android:orientation="vertical"
     android:padding="@dimen/primary_padding"
     tools:ignore="HardcodedText,UseCompoundDrawables,ContentDescription">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_dt2w"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginBottom="@dimen/primary_padding"
+        app:cardBackgroundColor="@color/primary_dark"
+        app:cardCornerRadius="@dimen/card_radius">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_charging_speed"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/primary_dark"
-            app:cardCornerRadius="@dimen/card_radius">
+            android:padding="@dimen/primary_padding">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/tv_dt2w"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Double Tap To Wake"
+                android:textColor="@color/e_balance_2800ma"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_dt2w"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/primary_padding">
+                android:layout_marginVertical="@dimen/primary_padding"
+                android:text="Click 2 times on the lock screen to wake the device"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintTop_toBottomOf="@+id/tv_dt2w" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/charging_speed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Charging Speed"
-                    android:textColor="@color/e_balance_2800ma"
-                    android:textSize="@dimen/text_medium"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_1800"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/primary_padding"
-                    app:cardBackgroundColor="@color/primary_dark_black"
-                    app:cardCornerRadius="@dimen/card_radius">
+        android:id="@+id/card_zram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/primary_padding"
+        app:cardBackgroundColor="@color/primary_dark"
+        app:cardCornerRadius="@dimen/card_radius">
 
-                    <TextView
-                        android:id="@+id/tv_1800"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/primary_padding"
-                        android:text="1800mA"
-                        android:textColor="@color/battery_1800ma"
-                        android:textSize="@dimen/text_medium"
-                        android:textStyle="bold" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_2300"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/primary_padding"
-                    app:cardBackgroundColor="@color/primary_dark_black"
-                    app:cardCornerRadius="@dimen/card_radius">
-
-                    <TextView
-                        android:id="@+id/tv_2300"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/primary_padding"
-                        android:text="2300mA"
-                        android:textColor="@color/balance_2300ma"
-                        android:textSize="@dimen/text_medium"
-                        android:textStyle="bold" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_2800"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/primary_padding"
-                    app:cardBackgroundColor="@color/primary_dark_black"
-                    app:cardCornerRadius="@dimen/card_radius">
-
-                    <TextView
-                        android:id="@+id/tv_2800"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/primary_padding"
-                        android:text="2800mA"
-                        android:textColor="@color/e_balance_2800ma"
-                        android:textSize="@dimen/text_medium"
-                        android:textStyle="bold" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_3000"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/secondary_padding"
-                    app:cardBackgroundColor="@color/primary_dark_black"
-                    app:cardCornerRadius="@dimen/card_radius">
-
-                    <TextView
-                        android:id="@+id/tv_3000"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/primary_padding"
-                        android:text="3000mA"
-                        android:textColor="@color/e_balance_2800ma"
-                        android:textSize="@dimen/text_medium"
-                        android:textStyle="bold" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_3300"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/secondary_padding"
-                    app:cardBackgroundColor="@color/primary_dark_black"
-                    app:cardCornerRadius="@dimen/card_radius">
-
-                    <TextView
-                        android:id="@+id/tv_3300"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/primary_padding"
-                        android:text="3300mA"
-                        android:textColor="@color/performance_3300ma"
-                        android:textSize="@dimen/text_medium"
-                        android:textStyle="bold" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_3500"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/secondary_padding"
-                    app:cardBackgroundColor="@color/primary_dark_black"
-                    app:cardCornerRadius="@dimen/card_radius">
-
-                    <TextView
-                        android:id="@+id/tv_3500"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/primary_padding"
-                        android:text="3500mA"
-                        android:textColor="@color/gaming_3500ma"
-                        android:textSize="@dimen/text_medium"
-                        android:textStyle="bold" />
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_battery_thermal"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/primary_padding"
-            app:cardBackgroundColor="@color/primary_dark"
-            app:cardCornerRadius="@dimen/card_radius">
+            android:padding="@dimen/primary_padding">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <TextView
+                android:id="@+id/tv_zram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="zRam"
+                android:textColor="@color/e_balance_2800ma"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_zram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/primary_padding">
+                android:layout_marginVertical="@dimen/primary_padding"
+                android:text="An extra 4G virtual Ram for best ram management"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintTop_toBottomOf="@+id/tv_zram" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/tv_battery_thermal_remover"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+    <androidx.cardview.widget.CardView
 
-                    android:text="Battery Thermal Remover"
-                    android:textColor="@color/e_balance_2800ma"
+        android:id="@+id/card_touch_tweaks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/primary_padding"
+        app:cardBackgroundColor="@color/primary_dark"
+        app:cardCornerRadius="@dimen/card_radius">
 
-                    android:textSize="@dimen/text_medium"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/switch_battery_thermal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginVertical="@dimen/primary_padding"
-                    android:text="Charge faster until the battery reach 45°C"
-
-                    android:textColor="@color/text_dark"
-                    android:textSize="@dimen/text_small"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_battery_thermal_remover" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_hdr_extreme"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/primary_padding"
-            app:cardBackgroundColor="@color/primary_dark"
-            app:cardCornerRadius="@dimen/card_radius">
+            android:padding="@dimen/primary_padding">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <TextView
+                android:id="@+id/tv_touch_tweaks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Touch Tweaks"
+                android:textColor="@color/e_balance_2800ma"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_touch_tweaks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/primary_padding">
+                android:layout_marginVertical="@dimen/primary_padding"
+                android:text="Improve touch latency"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintTop_toBottomOf="@+id/tv_touch_tweaks" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/tv_hdr_extreme"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+    <androidx.cardview.widget.CardView
 
-                    android:text="PUBG HDR Extreme"
-                    android:textColor="@color/e_balance_2800ma"
+        android:id="@+id/card_touch_latest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/primary_dark"
+        app:cardCornerRadius="@dimen/card_radius">
 
-                    android:textSize="@dimen/text_medium"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/primary_padding">
 
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/switch_hdr_extreme"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/tv_touch_latest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Touch Latest"
+                android:textColor="@color/e_balance_2800ma"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_touch_latest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginVertical="@dimen/primary_padding"
-                    android:text="Unlock HDR-Xtreme in PUBG"
-
-                    android:textColor="@color/text_dark"
-                    android:textSize="@dimen/text_small"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_hdr_extreme" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
-</ScrollView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/primary_padding"
+                android:text="Latest touch firmware"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintTop_toBottomOf="@+id/tv_touch_latest" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

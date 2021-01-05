@@ -80,7 +80,7 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginVertical="@dimen/primary_padding"
-                        android:text="1. App Optimizer\n2. Apply On Boot\n3. Battery Amps Monitor\n4. Colored FPS Meter (PUBG Enemy Tracker)\n4. In-App Kernel Updater\n6. Per-App Profiles\n7. Per-App Thermal Profiles\n8. RIP NSG Support\n9. Your Suggestions :-)"
+                        android:text="1. Custom Profiles\n2. Battery Amps Monitor\n3. Per-App Profiles\n4. Per-App Thermal Profiles\n5. RIP NSG Support\n6. Your Suggestions :-)"
 
                         android:textColor="@color/text_dark"
                         android:textSize="@dimen/text_small"

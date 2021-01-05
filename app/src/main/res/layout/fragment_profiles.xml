@@ -50,12 +50,12 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <View
-                    android:id="@+id/devider_info_1"
+                    android:id="@+id/divider_info_1"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/tab_indicator_height"
 
                     android:layout_marginTop="@dimen/secondary_padding"
-                    android:background="@color/devider_dark_semi_trans"
+                    android:background="@color/divider_dark_semi_trans"
 
                     app:layout_constraintTop_toBottomOf="@+id/tv_device_name" />
 
@@ -70,8 +70,8 @@
 
                     android:textSize="@dimen/text_medium"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/devider_info_1"
-                    app:layout_constraintTop_toBottomOf="@+id/devider_info_1" />
+                    app:layout_constraintStart_toStartOf="@+id/divider_info_1"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_info_1" />
 
                 <TextView
                     android:id="@+id/tv_kernel_name"
@@ -85,15 +85,15 @@
                     android:textColor="@color/e_balance_2800ma"
                     android:textSize="@dimen/text_small"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/devider_info_1" />
+                    app:layout_constraintTop_toBottomOf="@+id/divider_info_1" />
 
                 <View
-                    android:id="@+id/devider_info_2"
+                    android:id="@+id/divider_info_2"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/tab_indicator_height"
 
                     android:layout_marginTop="@dimen/secondary_padding"
-                    android:background="@color/devider_dark_semi_trans"
+                    android:background="@color/divider_dark_semi_trans"
 
                     app:layout_constraintTop_toBottomOf="@+id/tv_kernel_name" />
 
@@ -107,8 +107,8 @@
 
                     android:textSize="@dimen/text_medium"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/devider_info_2"
-                    app:layout_constraintTop_toBottomOf="@+id/devider_info_2" />
+                    app:layout_constraintStart_toStartOf="@+id/divider_info_2"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_info_2" />
 
                 <TextView
                     android:id="@+id/tv_lkm_version"
@@ -120,16 +120,16 @@
                     android:textColor="@color/e_balance_2800ma"
 
                     android:textSize="@dimen/text_small"
-                    app:layout_constraintEnd_toEndOf="@+id/devider_info_2"
-                    app:layout_constraintTop_toBottomOf="@+id/devider_info_2" />
+                    app:layout_constraintEnd_toEndOf="@+id/divider_info_2"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_info_2" />
 
                 <View
-                    android:id="@+id/devider_info_3"
+                    android:id="@+id/divider_info_3"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/tab_indicator_height"
 
                     android:layout_marginTop="@dimen/secondary_padding"
-                    android:background="@color/devider_dark_semi_trans"
+                    android:background="@color/divider_dark_semi_trans"
 
                     app:layout_constraintTop_toBottomOf="@+id/tv_lkm_version" />
 
@@ -143,8 +143,8 @@
 
                     android:textSize="@dimen/text_medium"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/devider_info_3"
-                    app:layout_constraintTop_toBottomOf="@+id/devider_info_3" />
+                    app:layout_constraintStart_toStartOf="@+id/divider_info_3"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_info_3" />
 
                 <TextView
                     android:id="@+id/tv_battery_temp"
@@ -157,7 +157,7 @@
 
                     android:textSize="@dimen/text_medium"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/devider_info_3" />
+                    app:layout_constraintTop_toBottomOf="@+id/divider_info_3" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
