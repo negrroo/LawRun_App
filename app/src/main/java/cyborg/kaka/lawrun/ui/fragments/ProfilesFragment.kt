@@ -3,6 +3,7 @@ package cyborg.kaka.lawrun.ui.fragments
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.IntentFilter
+import android.graphics.PorterDuff
 import android.graphics.drawable.GradientDrawable
 import android.os.*
 import android.view.LayoutInflater
@@ -11,6 +12,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.annotation.ColorRes
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import cyborg.kaka.lawrun.BuildConfig
 import cyborg.kaka.lawrun.R
@@ -29,6 +32,9 @@ import cyborg.kaka.lawrun.utils.Utils.setProp
 
 
 class ProfilesFragment : Fragment() {
+
+    fun ImageView.setSvgColor(@ColorRes color: Int) =
+        setColorFilter(ContextCompat.getColor(context, color), PorterDuff.Mode.SRC_IN)
 
     lateinit var layout: FragmentProfilesBinding // ViewBinding
 
@@ -63,7 +69,7 @@ class ProfilesFragment : Fragment() {
         layout.cardPerformance.setOnClickListener { setProfile(PROFILE_PERFORMANCE) }
         layout.cardGaming.setOnClickListener { setProfile(PROFILE_GAMING) }
 
-        // Check LawRun Support
+        //Check LawRun Support
         if (getProp(PROP_LAWRUN_SUPPORT) != "1") {
             disableProfileScreen()
         }
@@ -139,31 +145,36 @@ class ProfilesFragment : Fragment() {
                 themeColor = activity!!.getColor(R.color.battery_1800ma)
                 layout.cardBattery.setCardBackgroundColor(themeColor)
                 layout.tvBattery.setTextColor(defaultDarkColor)
-                tabHeart.setImageResource(R.mipmap.ic_heart_battery)
+//                tabHeart.setImageResource(R.mipmap.ic_heart_battery)
+                tabHeart.setSvgColor(R.color.battery_1800ma)
             }
             PROFILE_BALANCE.toString() -> {
                 themeColor = activity!!.getColor(R.color.balance_2300ma)
                 layout.cardBalance.setCardBackgroundColor(themeColor)
                 layout.tvBalance.setTextColor(defaultDarkColor)
-                tabHeart.setImageResource(R.mipmap.ic_heart_balance)
+//                tabHeart.setImageResource(R.mipmap.ic_heart_balance)
+                tabHeart.setSvgColor(R.color.balance_2300ma)
             }
             PROFILE_EXTRA_BALANCE.toString() -> {
                 themeColor = activity!!.getColor(R.color.e_balance_2800ma)
                 layout.cardEbalance.setCardBackgroundColor(themeColor)
                 layout.tvEbalance.setTextColor(defaultDarkColor)
-                tabHeart.setImageResource(R.mipmap.ic_heart_ebalance)
+//                tabHeart.setImageResource(R.mipmap.ic_heart_ebalance)
+                tabHeart.setSvgColor(R.color.e_balance_2800ma)
             }
             PROFILE_PERFORMANCE.toString() -> {
                 themeColor = activity!!.getColor(R.color.performance_3300ma)
                 layout.cardPerformance.setCardBackgroundColor(themeColor)
                 layout.tvPerformance.setTextColor(defaultDarkColor)
-                tabHeart.setImageResource(R.mipmap.ic_heart_performance)
+//                tabHeart.setImageResource(R.mipmap.ic_heart_performance)
+                tabHeart.setSvgColor(R.color.performance_3300ma)
             }
             PROFILE_GAMING.toString() -> {
                 themeColor = activity!!.getColor(R.color.gaming_3500ma)
                 layout.cardGaming.setCardBackgroundColor(themeColor)
                 layout.tvGaming.setTextColor(defaultDarkColor)
-                tabHeart.setImageResource(R.mipmap.ic_heart_gaming)
+//                tabHeart.setImageResource(R.mipmap.ic_heart_gaming)
+                tabHeart.setSvgColor(R.color.gaming_3500ma)
             }
         }
 
@@ -185,6 +196,8 @@ class ProfilesFragment : Fragment() {
     private fun disableProfileScreen() {
         layout.profiles.visibility = View.GONE
         layout.profilesNotSupported.visibility = View.VISIBLE
+        layout.profilesNotSupportedInstall.visibility = View.VISIBLE
+        layout.profilesNotSupportedBest.visibility = View.VISIBLE
     }
 
     // Apply Profile

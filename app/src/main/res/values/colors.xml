@@ -5,7 +5,7 @@
     <color name="text_dark">#666666</color>
     <color name="divider_dark_semi_trans">#40666666</color>
 
-    <color name="battery_1800ma">#109D58</color>
+    <color name="battery_1800ma">#00C853</color>
     <color name="balance_2300ma">#65C3AB</color>
     <color name="e_balance_2800ma">#229ACE</color>
     <color name="charge_3000ma">#d3d440</color>

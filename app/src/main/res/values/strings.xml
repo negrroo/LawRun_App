@@ -5,6 +5,8 @@
     <string name="balance">Balance</string>
     <string name="performance">Performance</string>
     <string name="gaming">Gaming</string>
-    <string name="profile_not_supported_msg">LawRun Profiles not installed !</string>
+    <string name="profile_not_supported_msg">🙁️ LawRun Profiles not installed! 🙁️</string>
+    <string name="law_install">‍🔥️ Install LawRun Profiles, Its Super Cool. We have also added some amazing features for you! ‍🔥️</string>
+    <string name="law_best">🚀 LawRun Kernel is one of the BEST Kernel for SDM845 Devices! 🚀</string>
     <string name="law_profile">Law Profile</string>
 </resources>
