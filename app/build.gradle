@@ -11,8 +11,8 @@ android {
         applicationId "cyborg.kaka.lawrun"
         minSdkVersion 28
         targetSdkVersion 30
-        versionCode 5
-        versionName "1.4"
+        versionCode 6
+        versionName "1.5"
         resConfigs "en"
         resConfigs "xxhdpi"
     }
