@@ -34,5 +34,5 @@ object Constants {
     const val PROP_GAME_TWEAKS = "persist.lawrun.game_tweaks"
 
     // Others
-    const val UPDATE_URL = "https://raw.githubusercontent.com/cyborg-kaka/LawRun-Kernel-Manager/master/README.md"
+    const val UPDATE_URL = "https://raw.githubusercontent.com/negrroo/LawRun_App/master/README.md"
 }
