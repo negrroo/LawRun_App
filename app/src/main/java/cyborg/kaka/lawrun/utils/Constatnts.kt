@@ -29,6 +29,7 @@ object Constants {
     // Gaming
     const val PUBGM_HDR_FILE = "/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/EnjoyCJZC.ini"
     const val PUBGM_KR_HDR_FILE = "/storage/emulated/0/Android/data/com.pubg.krmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/EnjoyCJZC.ini"
+    const val PUBGM_IN_HDR_FILE = "/storage/emulated/0/Android/data/com.pubg.imobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/EnjoyCJZC.ini"
     const val PROP_HDR_FILE_PATH = "lawrun.hdr_extreme_path"
     const val PROP_GAME_TWEAKS = "persist.lawrun.game_tweaks"
 
