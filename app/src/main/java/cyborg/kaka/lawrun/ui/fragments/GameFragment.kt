@@ -14,6 +14,7 @@ import cyborg.kaka.lawrun.databinding.FragmentGameBinding
 import cyborg.kaka.lawrun.utils.Constants
 import cyborg.kaka.lawrun.utils.Constants.PROP_HDR_FILE_PATH
 import cyborg.kaka.lawrun.utils.Constants.PUBGM_HDR_FILE
+import cyborg.kaka.lawrun.utils.Constants.PUBGM_IN_HDR_FILE
 import cyborg.kaka.lawrun.utils.Constants.PUBGM_KR_HDR_FILE
 import cyborg.kaka.lawrun.utils.Utils
 
@@ -49,9 +50,15 @@ class GameFragment : Fragment() {
                     ) {
                         ShellUtils.fastCmd("cp -a ${Utils.getProp(PROP_HDR_FILE_PATH)} $PUBGM_KR_HDR_FILE") // PUBGM Korean HDR Extreme On
                     }
+                    if (SuFile.open("/storage/emulated/0/Android/data/com.pubg.imobile/")
+                            .exists()
+                    ) {
+                        ShellUtils.fastCmd("cp -a ${Utils.getProp(PROP_HDR_FILE_PATH)} $PUBGM_IN_HDR_FILE") // PUBGM Indian HDR Extreme On
+                    }
                 } else {
                     ShellUtils.fastCmd("rm $PUBGM_HDR_FILE") // PUBGM HDR Extreme Off
                     ShellUtils.fastCmd("rm $PUBGM_KR_HDR_FILE") // PUBGM Korean HDR Extreme Off
+                    ShellUtils.fastCmd("rm $PUBGM_IN_HDR_FILE") // PUBGM Korean HDR Extreme Off
                 }
             }
             getHDRExtreme() // Update HDR Extreme Switch State
@@ -82,14 +89,14 @@ class GameFragment : Fragment() {
     // HDR Extreme Switch State
     private fun getHDRExtreme() {
         if ((!SuFile.open("/storage/emulated/0/Android/data/com.tencent.ig/").exists()
-                    && !SuFile.open("/storage/emulated/0/Android/data/com.pubg.krmobile/").exists())
+                    && !SuFile.open("/storage/emulated/0/Android/data/com.pubg.krmobile/").exists() && !SuFile.open("/storage/emulated/0/Android/data/com.pubg.imobile/").exists())
             || Utils.getProp(PROP_HDR_FILE_PATH) == ""
             || !SuFile.open(Utils.getProp(PROP_HDR_FILE_PATH)).exists()
         ) {
             layout.cardHdrExtreme.visibility = View.GONE // HDR Extreme Card Hide
             return
         }
-        if (SuFile.open(PUBGM_HDR_FILE).exists() || SuFile.open(PUBGM_KR_HDR_FILE).exists()) {
+        if (SuFile.open(PUBGM_HDR_FILE).exists() || SuFile.open(PUBGM_KR_HDR_FILE).exists() || SuFile.open(PUBGM_IN_HDR_FILE).exists()) {
             layout.switchHdrExtreme.isChecked = true // HDR Extreme Switch State On
             return
         }
