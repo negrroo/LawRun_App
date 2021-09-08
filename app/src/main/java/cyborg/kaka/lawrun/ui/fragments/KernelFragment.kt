@@ -42,7 +42,6 @@ class KernelFragment : Fragment() {
         layout.switchZram.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) Utils.setProp(Constants.PROP_ZRAM_TWEAKS, "1")
             else Utils.setProp(Constants.PROP_ZRAM_TWEAKS, "0")
-            Utils.needRebootToast(activity)
             getZramTweaks()
         }
 
@@ -50,7 +49,6 @@ class KernelFragment : Fragment() {
         layout.switchTouchTweaks.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) Utils.setProp(Constants.PROP_TOUCH_TWEAKS, "1")
             else Utils.setProp(Constants.PROP_TOUCH_TWEAKS, "0")
-            Utils.needRebootToast(activity)
             getTouchTweaks()
         }
 

@@ -228,7 +228,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/primary_padding"
-                    android:text="More battery backup (UI may lag)"
+                    android:text="More battery backup (UI may lag) *Reboot Required*"
                     android:textColor="@color/text_dark"
                     android:textSize="@dimen/text_small"
                     app:layout_constraintTop_toBottomOf="@+id/tv_battery_tweaks" />
