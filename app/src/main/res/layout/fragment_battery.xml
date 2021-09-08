@@ -38,6 +38,25 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card_1200"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/primary_padding"
+                    app:cardBackgroundColor="@color/primary_dark_black"
+                    app:cardCornerRadius="@dimen/card_radius">
+
+                    <TextView
+                        android:id="@+id/tv_1200"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/primary_padding"
+                        android:text="1200mA"
+                        android:textColor="@color/battery_1800ma"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:id="@+id/card_1800"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -30,6 +30,7 @@ class BatteryFragment : Fragment() {
         layout = FragmentBatteryBinding.inflate(inflater, container, false)
 
         // Charging Amps Card OnClick
+        layout.card1200.setOnClickListener { setChargingSpeed(1200) }
         layout.card1800.setOnClickListener { setChargingSpeed(1800) }
         layout.card2300.setOnClickListener { setChargingSpeed(2300) }
         layout.card2800.setOnClickListener { setChargingSpeed(2800) }
@@ -75,12 +76,14 @@ class BatteryFragment : Fragment() {
     // Reset Colors
     private fun resetColors() {
         // Card Default Colors
+        layout.card1200.setCardBackgroundColor(activity!!.getColor(R.color.primary_dark_black))
         layout.card1800.setCardBackgroundColor(activity!!.getColor(R.color.primary_dark_black))
         layout.card2300.setCardBackgroundColor(activity!!.getColor(R.color.primary_dark_black))
         layout.card2800.setCardBackgroundColor(activity!!.getColor(R.color.primary_dark_black))
         layout.card3000.setCardBackgroundColor(activity!!.getColor(R.color.primary_dark_black))
         layout.card3300.setCardBackgroundColor(activity!!.getColor(R.color.primary_dark_black))
         layout.card3500.setCardBackgroundColor(activity!!.getColor(R.color.primary_dark_black))
+        layout.tv1200.setTextColor(activity!!.getColor(R.color.battery_1800ma))
         layout.tv1800.setTextColor(activity!!.getColor(R.color.battery_1800ma))
         layout.tv2300.setTextColor(activity!!.getColor(R.color.balance_2300ma))
         layout.tv2800.setTextColor(activity!!.getColor(R.color.e_balance_2800ma))
@@ -103,12 +106,16 @@ class BatteryFragment : Fragment() {
     // Current Amps Card
     private fun getAppliedAmps() {
         if (!SuFile.open(CHARGING_MAX_FILE).exists() || ShellUtils.fastCmd("cat $CHARGING_MAX_FILE")
-                .toInt() < 1800000
+                .toInt() < 1200000
         ) {
             layout.cardChargingSpeed.visibility = View.GONE
             return
         }
         when (ShellUtils.fastCmd("cat $CHARGING_MAX_FILE")) {
+            "1200000" -> {
+                layout.card1200.setCardBackgroundColor(activity!!.getColor(R.color.battery_1800ma))
+                layout.tv1200.setTextColor(activity!!.getColor(R.color.primary_dark))
+            }
             "1800000" -> {
                 layout.card1800.setCardBackgroundColor(activity!!.getColor(R.color.battery_1800ma))
                 layout.tv1800.setTextColor(activity!!.getColor(R.color.primary_dark))
