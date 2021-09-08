@@ -133,45 +133,4 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_touch_tweaks" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-
-        android:id="@+id/card_touch_latest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/primary_dark"
-        app:cardCornerRadius="@dimen/card_radius">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/primary_padding">
-
-            <TextView
-                android:id="@+id/tv_touch_latest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Touch Latest"
-                android:textColor="@color/e_balance_2800ma"
-                android:textSize="@dimen/text_medium"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switch_touch_latest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/primary_padding"
-                android:text="Latest touch firmware"
-                android:textColor="@color/text_dark"
-                android:textSize="@dimen/text_small"
-                app:layout_constraintTop_toBottomOf="@+id/tv_touch_latest" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 </LinearLayout>

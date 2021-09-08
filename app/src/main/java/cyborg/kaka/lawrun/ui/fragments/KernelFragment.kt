@@ -52,18 +52,6 @@ class KernelFragment : Fragment() {
             getTouchTweaks()
         }
 
-        // Touch Latest Switch Listener
-        layout.switchTouchLatest.setOnCheckedChangeListener { _, isChecked ->
-            if (Utils.rootCheck(activity)) {
-                if (isChecked) {
-                    ShellUtils.fastCmd("echo 1 > " + Constants.TOUCH_LATEST_FILE)
-                } else {
-                    ShellUtils.fastCmd("echo 0 > " + Constants.TOUCH_LATEST_FILE)
-                }
-            }
-            getTouchLatest()
-        }
-
         return layout.root
     }
 
@@ -78,7 +66,6 @@ class KernelFragment : Fragment() {
         layout.tvDt2w.setTextColor(themeColor)
         layout.tvZram.setTextColor(themeColor)
         layout.tvTouchTweaks.setTextColor(themeColor)
-        layout.tvTouchLatest.setTextColor(themeColor)
     }
 
 
@@ -103,19 +90,6 @@ class KernelFragment : Fragment() {
     // Touch Tweaks Switch State
     private fun getTouchTweaks() {
         layout.switchTouchTweaks.isChecked = Utils.getProp(Constants.PROP_TOUCH_TWEAKS) == "1"
-    }
-
-    // Touch Latest Switch State
-    private fun getTouchLatest() {
-        if (!SuFile.open(Constants.TOUCH_LATEST_FILE).exists()) {
-            layout.cardTouchLatest.visibility = View.GONE
-            return
-        }
-        if (ShellUtils.fastCmd("cat " + Constants.TOUCH_LATEST_FILE) == "1") {
-            layout.switchTouchLatest.isChecked = true
-            return
-        }
-        layout.switchTouchLatest.isChecked = false
     }
 
     // Refresh Fragment
