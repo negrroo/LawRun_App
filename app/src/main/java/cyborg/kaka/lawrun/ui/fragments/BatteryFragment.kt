@@ -55,7 +55,6 @@ class BatteryFragment : Fragment() {
         layout.switchBatteryTweaks.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) Utils.setProp(PROP_BATTERY_TWEAKS,"1")
             else Utils.setProp(PROP_BATTERY_TWEAKS,"0")
-            Utils.needRebootToast(activity)
             getBatteryTweaks()
         }
 

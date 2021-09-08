@@ -34,7 +34,6 @@ class GameFragment : Fragment() {
         layout.switchGameTweaks.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) Utils.setProp(Constants.PROP_GAME_TWEAKS, "1")
             else Utils.setProp(Constants.PROP_GAME_TWEAKS, "0")
-            Utils.needRebootToast(activity)
             getGameTweaks()
         }
 

@@ -40,8 +40,4 @@ object Utils {
     fun setProp(prop: String, value: String) {
         ShellUtils.fastCmd("setprop $prop $value")
     }
-
-    fun needRebootToast(ctx: Context?) {
-        Toast.makeText(ctx, "Take effect on next reboot", Toast.LENGTH_SHORT).show()
-    }
 }
