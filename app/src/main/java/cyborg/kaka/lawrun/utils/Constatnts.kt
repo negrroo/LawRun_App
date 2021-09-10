@@ -14,7 +14,6 @@ object Constants {
 
     // Kernel
     const val DT2W_FILE = "/proc/touchpanel/gesture_enable"
-    const val TOUCH_LATEST_FILE = "/sys/module/nt36xxx/parameters/fw_variant"
 
     const val PROP_ZRAM_TWEAKS = "persist.lawrun.zram_tweaks"
     const val PROP_TOUCH_TWEAKS = "persist.lawrun.touch_tweaks"
