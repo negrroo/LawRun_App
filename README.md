@@ -7,4 +7,4 @@ LawRun Kernel Manager is companion app developed and maintained by [@cyborg-kaka
 ### Latest app version
 LatestVersion = 5
 
-UpdateUrl = https://ex-foary.com/LawRun_App
+UpdateUrl = https://lawrun-kernel.blogspot.com/search/label/App
