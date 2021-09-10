@@ -33,7 +33,7 @@ class AboutFragment : Fragment() {
         // App Telegram
         layout.cardContactCyborg.setOnClickListener {
             val intent =
-                Intent(Intent.ACTION_VIEW, Uri.parse("tg://resolve?domain=CyborgKaka"))
+                Intent(Intent.ACTION_VIEW, Uri.parse("tg://resolve?domain=khanra17"))
             startActivity(intent)
         }
 
@@ -41,16 +41,16 @@ class AboutFragment : Fragment() {
         layout.cardSupportNegrroo.setOnClickListener {
             val intent = Intent(
                 Intent.ACTION_VIEW,
-                Uri.parse("https://www.lawrun-kernel.ml/2020/08/donation-link.html")
+                Uri.parse("https://lawrun-kernel.blogspot.com/2020/08/donation-link.html")
             )
             startActivity(intent)
         }
 
-        // Cyborg Paypal
+        // Cyborg Paypal *Temporary adding My Link...
         layout.cardSupportCyborg.setOnClickListener {
             val intent = Intent(
                 Intent.ACTION_VIEW,
-                Uri.parse("https://www.paypal.me/SumanKhanra?locale.x=en_US")
+                Uri.parse("https://lawrun-kernel.blogspot.com/2020/08/donation-link.html")
             )
             startActivity(intent)
         }
