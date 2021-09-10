@@ -3,6 +3,7 @@ package cyborg.kaka.lawrun.ui.fragments
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.Context
 import android.graphics.drawable.GradientDrawable
 import android.os.*
 import android.view.LayoutInflater
@@ -12,6 +13,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.topjohnwu.superuser.internal.Utils
 import cyborg.kaka.lawrun.BuildConfig
 import cyborg.kaka.lawrun.R
 import cyborg.kaka.lawrun.databinding.FragmentProfilesBinding
@@ -110,6 +112,20 @@ class ProfilesFragment : Fragment() {
                 batteryTempUpdater.postDelayed(this, 1000)
             }
         }, 1000)
+
+        // Battery Current
+        val batteryCurrentUpdater = Handler(Looper.getMainLooper())
+        batteryCurrentUpdater.postDelayed(object : Runnable {
+            override fun run() {
+                val manager =
+                    Utils.context.getSystemService(Context.BATTERY_SERVICE) as BatteryManager
+                val value =
+                    manager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CURRENT_NOW)
+                layout.tvBatteryCurrent.text =
+                    (value / 1000).toString()  + "mA"
+                batteryCurrentUpdater.postDelayed(this, 1000)
+            }
+        }, 1000)
     }
 
     // Reset To Default Colors & Apply Color Of Selected Theme
@@ -172,6 +188,7 @@ class ProfilesFragment : Fragment() {
         layout.tvKernelName.setTextColor(themeColor)
         layout.tvLkmVersion.setTextColor(themeColor)
         layout.tvBatteryTemp.setTextColor(themeColor)
+        layout.tvBatteryCurrent.setTextColor(themeColor)
 
         // Apply Selected Tab Color
         textProfiles.setTextColor(themeColor)

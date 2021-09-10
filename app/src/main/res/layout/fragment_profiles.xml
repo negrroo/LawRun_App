@@ -159,6 +159,42 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/divider_info_3" />
 
+                <View
+                    android:id="@+id/divider_info_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tab_indicator_height"
+
+                    android:layout_marginTop="48dp"
+                    android:background="@color/divider_dark_semi_trans"
+
+                    app:layout_constraintTop_toBottomOf="@+id/tv_lkm_version" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/secondary_padding"
+                    android:text="Battery Current"
+                    android:textColor="@color/text_dark"
+
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/divider_info_4"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_info_4" />
+
+                <TextView
+                    android:id="@+id/tv_battery_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/secondary_padding"
+                    android:text="400mA"
+                    android:textColor="@color/e_balance_2800ma"
+
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_info_4" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
