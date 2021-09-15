@@ -28,6 +28,7 @@ import cyborg.kaka.lawrun.utils.Constants.PROP_LAWRUN_SUPPORT
 import cyborg.kaka.lawrun.utils.Utils.getProp
 import cyborg.kaka.lawrun.utils.Utils.rootCheck
 import cyborg.kaka.lawrun.utils.Utils.setProp
+import kotlin.math.abs
 
 
 class ProfilesFragment : Fragment() {
@@ -121,8 +122,28 @@ class ProfilesFragment : Fragment() {
                     Utils.context.getSystemService(Context.BATTERY_SERVICE) as BatteryManager
                 val value =
                     manager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CURRENT_NOW)
-                layout.tvBatteryCurrent.text =
-                    (value / 1000).toString()  + "mA"
+                val status =
+                    manager.getIntProperty(BatteryManager.BATTERY_PROPERTY_STATUS)
+
+                val isCharging = (status == BatteryManager.BATTERY_STATUS_CHARGING)
+                val isCharged = (status == BatteryManager.BATTERY_STATUS_FULL)
+                val value2 = abs(value / 1000)
+
+                when {
+                    isCharging -> {
+                        layout.tvBatteryCurrent.text =
+                            "+" + value2.toString() + "mA"
+                    }
+                    isCharged -> {
+                        layout.tvBatteryCurrent.text =
+                            "FULL"
+                    }
+                    else -> {
+                        layout.tvBatteryCurrent.text =
+                            "-" + value2.toString()  + "mA"
+                    }
+                }
+
                 batteryCurrentUpdater.postDelayed(this, 1000)
             }
         }, 1000)
