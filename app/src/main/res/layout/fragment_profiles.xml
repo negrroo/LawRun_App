@@ -208,6 +208,44 @@
             android:textSize="@dimen/text_large"
             android:visibility="gone" />
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/download_Profiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/primary_padding"
+            app:cardBackgroundColor="@color/primary_dark"
+            app:cardCornerRadius="@dimen/card_radius"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/primary_padding"
+                android:text="Download Profiles"
+                android:textColor="@color/battery_1800ma"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/install_Profiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/secondary_padding"
+            app:cardBackgroundColor="@color/primary_dark"
+            app:cardCornerRadius="@dimen/card_radius"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/primary_padding"
+                android:text="Installation Guide"
+                android:textColor="@color/performance_3300ma"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
         <LinearLayout
             android:id="@+id/profiles"
             android:layout_width="match_parent"

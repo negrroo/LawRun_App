@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
+import android.net.Uri
 import android.os.*
 import android.view.LayoutInflater
 import android.view.View
@@ -223,6 +224,24 @@ class ProfilesFragment : Fragment() {
     private fun disableProfileScreen() {
         layout.profiles.visibility = View.GONE
         layout.profilesNotSupported.visibility = View.VISIBLE
+
+        // Profiles Link
+        layout.downloadProfiles.setOnClickListener {
+            val intent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://lawrun-kernel.blogspot.com/search/label/Profiles/")
+            )
+            startActivity(intent)
+        }
+
+        // How to Install
+        layout.installProfiles.setOnClickListener {
+            val intent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://lawrun-kernel.blogspot.com/2020/04/installation-guide.html")
+            )
+            startActivity(intent)
+        }
     }
 
     // Apply Profile
