@@ -69,6 +69,25 @@ class ProfilesFragment : Fragment() {
 
         // Check LawRun Support
         if (getProp(PROP_LAWRUN_SUPPORT) != "1") {
+
+            // Profiles Link
+            layout.downloadProfiles.setOnClickListener {
+                val intent = Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://lawrun-kernel.blogspot.com/search/label/Profiles/")
+                )
+                startActivity(intent)
+            }
+
+            // How to Install
+            layout.installProfiles.setOnClickListener {
+                val intent = Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://lawrun-kernel.blogspot.com/2020/04/installation-guide.html")
+                )
+                startActivity(intent)
+            }
+
             disableProfileScreen()
         }
 
@@ -224,24 +243,8 @@ class ProfilesFragment : Fragment() {
     private fun disableProfileScreen() {
         layout.profiles.visibility = View.GONE
         layout.profilesNotSupported.visibility = View.VISIBLE
-
-        // Profiles Link
-        layout.downloadProfiles.setOnClickListener {
-            val intent = Intent(
-                Intent.ACTION_VIEW,
-                Uri.parse("https://lawrun-kernel.blogspot.com/search/label/Profiles/")
-            )
-            startActivity(intent)
-        }
-
-        // How to Install
-        layout.installProfiles.setOnClickListener {
-            val intent = Intent(
-                Intent.ACTION_VIEW,
-                Uri.parse("https://lawrun-kernel.blogspot.com/2020/04/installation-guide.html")
-            )
-            startActivity(intent)
-        }
+        layout.downloadProfiles.visibility = View.VISIBLE
+        layout.installProfiles.visibility = View.VISIBLE
     }
 
     // Apply Profile
