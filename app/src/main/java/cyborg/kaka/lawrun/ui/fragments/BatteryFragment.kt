@@ -11,6 +11,7 @@ import com.topjohnwu.superuser.ShellUtils
 import com.topjohnwu.superuser.io.SuFile
 import cyborg.kaka.lawrun.R
 import cyborg.kaka.lawrun.databinding.FragmentBatteryBinding
+import cyborg.kaka.lawrun.utils.Constants
 import cyborg.kaka.lawrun.utils.Constants.BATTERY_THERMAL_COOL_FILE
 import cyborg.kaka.lawrun.utils.Constants.BATTERY_THERMAL_WARM_FILE
 import cyborg.kaka.lawrun.utils.Constants.CHARGING_MAX_FILE
@@ -57,6 +58,11 @@ class BatteryFragment : Fragment() {
             if (isChecked) Utils.setProp(PROP_BATTERY_TWEAKS,"1")
             else Utils.setProp(PROP_BATTERY_TWEAKS,"0")
             getBatteryTweaks()
+        }
+
+        // Check LawRun Support
+        if (Utils.getProp(Constants.PROP_LAWRUN_SUPPORT) != "1") {
+            disableProfileScreen()
         }
 
         return layout.root
@@ -163,6 +169,11 @@ class BatteryFragment : Fragment() {
     // Battery Tweaks Switch State
     private fun getBatteryTweaks() {
         layout.switchBatteryTweaks.isChecked = Utils.getProp(PROP_BATTERY_TWEAKS) == "1"
+    }
+
+    // lawRun Not Available
+    private fun disableProfileScreen() {
+        layout.switchBatteryTweaks.visibility = View.GONE
     }
 
     // Refresh Fragment

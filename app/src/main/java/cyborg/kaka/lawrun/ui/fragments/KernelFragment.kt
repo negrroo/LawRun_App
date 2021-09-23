@@ -12,7 +12,9 @@ import com.topjohnwu.superuser.io.SuFile
 import cyborg.kaka.lawrun.R
 import cyborg.kaka.lawrun.databinding.FragmentKernelBinding
 import cyborg.kaka.lawrun.utils.Constants
+import cyborg.kaka.lawrun.utils.Constants.PROP_LAWRUN_SUPPORT
 import cyborg.kaka.lawrun.utils.Utils
+import cyborg.kaka.lawrun.utils.Utils.getProp
 
 
 class KernelFragment : Fragment() {
@@ -50,6 +52,11 @@ class KernelFragment : Fragment() {
             if (isChecked) Utils.setProp(Constants.PROP_TOUCH_TWEAKS, "1")
             else Utils.setProp(Constants.PROP_TOUCH_TWEAKS, "0")
             getTouchTweaks()
+        }
+
+        // Check LawRun Support
+        if (getProp(PROP_LAWRUN_SUPPORT) != "1") {
+            disableProfileScreen()
         }
 
         return layout.root
@@ -90,6 +97,12 @@ class KernelFragment : Fragment() {
     // Touch Tweaks Switch State
     private fun getTouchTweaks() {
         layout.switchTouchTweaks.isChecked = Utils.getProp(Constants.PROP_TOUCH_TWEAKS) == "1"
+    }
+
+    // lawRun Not Available
+    private fun disableProfileScreen() {
+        layout.switchZram.visibility = View.GONE
+        layout.switchTouchTweaks.visibility = View.GONE
     }
 
     // Refresh Fragment

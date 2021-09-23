@@ -63,6 +63,11 @@ class GameFragment : Fragment() {
             getHDRExtreme() // Update HDR Extreme Switch State
         }
 
+        // Check LawRun Support
+        if (Utils.getProp(Constants.PROP_LAWRUN_SUPPORT) != "1") {
+            disableProfileScreen()
+        }
+
         // Show Layout
         return layout.root
     }
@@ -100,6 +105,12 @@ class GameFragment : Fragment() {
             return
         }
         layout.switchHdrExtreme.isChecked = false // HDR Extreme Switch State Off
+    }
+
+    // lawRun Not Available
+    private fun disableProfileScreen() {
+        layout.switchGameTweaks.visibility = View.GONE
+        layout.switchHdrExtreme.visibility = View.GONE
     }
 
     // Refresh Fragment
