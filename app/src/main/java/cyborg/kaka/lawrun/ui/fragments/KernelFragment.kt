@@ -54,6 +54,20 @@ class KernelFragment : Fragment() {
             getTouchTweaks()
         }
 
+        // Power Tweaks Switch Listener
+        layout.switchPowerTweaks.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) Utils.setProp(Constants.PROP_POWER_TWEAKS, "1")
+            else Utils.setProp(Constants.PROP_POWER_TWEAKS, "0")
+            getPowerTweaks()
+        }
+
+        // System Tweaks Switch Listener
+        layout.switchSystemTweaks.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) Utils.setProp(Constants.PROP_SYSTEM_TWEAKS, "1")
+            else Utils.setProp(Constants.PROP_SYSTEM_TWEAKS, "0")
+            getSystemTweaks()
+        }
+
         // Check LawRun Support
         if (getProp(PROP_LAWRUN_SUPPORT) != "1") {
             disableProfileScreen()
@@ -73,6 +87,8 @@ class KernelFragment : Fragment() {
         layout.tvDt2w.setTextColor(themeColor)
         layout.tvZram.setTextColor(themeColor)
         layout.tvTouchTweaks.setTextColor(themeColor)
+        layout.tvPowerTweaks.setTextColor(themeColor)
+        layout.tvSystemTweaks.setTextColor(themeColor)
     }
 
 
@@ -99,10 +115,22 @@ class KernelFragment : Fragment() {
         layout.switchTouchTweaks.isChecked = Utils.getProp(Constants.PROP_TOUCH_TWEAKS) == "1"
     }
 
+    // Power Tweaks Switch State
+    private fun getPowerTweaks() {
+        layout.switchPowerTweaks.isChecked = Utils.getProp(Constants.PROP_POWER_TWEAKS) == "1"
+    }
+
+    // System Tweaks Switch State
+    private fun getSystemTweaks() {
+        layout.switchSystemTweaks.isChecked = Utils.getProp(Constants.PROP_SYSTEM_TWEAKS) == "1"
+    }
+
     // lawRun Not Available
     private fun disableProfileScreen() {
         layout.switchZram.visibility = View.GONE
         layout.switchTouchTweaks.visibility = View.GONE
+        layout.switchPowerTweaks.visibility = View.GONE
+        layout.switchSystemTweaks.visibility = View.GONE
     }
 
     // Refresh Fragment
@@ -112,5 +140,7 @@ class KernelFragment : Fragment() {
         getDT2W()
         getZramTweaks()
         getTouchTweaks()
+        getPowerTweaks()
+        getSystemTweaks()
     }
 }

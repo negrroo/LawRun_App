@@ -18,6 +18,9 @@ object Constants {
     const val PROP_ZRAM_TWEAKS = "persist.lawrun.zram_tweaks"
     const val PROP_TOUCH_TWEAKS = "persist.lawrun.touch_tweaks"
 
+    const val PROP_POWER_TWEAKS = "persist.lawrun.power_tweaks"
+    const val PROP_SYSTEM_TWEAKS = "persist.lawrun.system_tweaks"
+
     // Battery
     const val CHARGING_MAX_FILE = "/sys/class/power_supply/battery/constant_charge_current_max"
     const val BATTERY_THERMAL_COOL_FILE = "/sys/class/power_supply/bms/temp_cool"
