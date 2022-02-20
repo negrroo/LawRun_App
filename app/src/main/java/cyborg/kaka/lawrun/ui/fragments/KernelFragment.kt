@@ -47,18 +47,25 @@ class KernelFragment : Fragment() {
             getZramTweaks()
         }
 
-        // Touch Tweaks Switch Listener
-        layout.switchTouchTweaks.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) Utils.setProp(Constants.PROP_TOUCH_TWEAKS, "1")
-            else Utils.setProp(Constants.PROP_TOUCH_TWEAKS, "0")
-            getTouchTweaks()
-        }
-
         // Power Tweaks Switch Listener
         layout.switchPowerTweaks.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) Utils.setProp(Constants.PROP_POWER_TWEAKS, "1")
             else Utils.setProp(Constants.PROP_POWER_TWEAKS, "0")
             getPowerTweaks()
+        }
+
+        // I/O Tweaks Switch Listener
+        layout.switchIoTweaks.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) Utils.setProp(Constants.PROP_Io_TWEAKS, "1")
+            else Utils.setProp(Constants.PROP_Io_TWEAKS, "0")
+            getIoTweaks()
+        }
+
+        // Ram Tweaks Switch Listener
+        layout.switchRAMTweaks.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) Utils.setProp(Constants.PROP_RAM_TWEAKS, "1")
+            else Utils.setProp(Constants.PROP_RAM_TWEAKS, "0")
+            getRAMTweaks()
         }
 
         // System Tweaks Switch Listener
@@ -86,7 +93,8 @@ class KernelFragment : Fragment() {
         // Card Default Colors
         layout.tvDt2w.setTextColor(themeColor)
         layout.tvZram.setTextColor(themeColor)
-        layout.tvTouchTweaks.setTextColor(themeColor)
+        layout.tvRAMTweaks.setTextColor(themeColor)
+        layout.tvIoTweaks.setTextColor(themeColor)
         layout.tvPowerTweaks.setTextColor(themeColor)
         layout.tvSystemTweaks.setTextColor(themeColor)
     }
@@ -110,9 +118,14 @@ class KernelFragment : Fragment() {
         layout.switchZram.isChecked = Utils.getProp(Constants.PROP_ZRAM_TWEAKS) == "1"
     }
 
-    // Touch Tweaks Switch State
-    private fun getTouchTweaks() {
-        layout.switchTouchTweaks.isChecked = Utils.getProp(Constants.PROP_TOUCH_TWEAKS) == "1"
+    // I/O Tweaks Switch State
+    private fun getIoTweaks() {
+        layout.switchIoTweaks.isChecked = Utils.getProp(Constants.PROP_TOUCH_TWEAKS) == "1"
+    }
+
+    // Ram Tweaks Switch State
+    private fun getRAMTweaks() {
+        layout.switchRAMTweaks.isChecked = Utils.getProp(Constants.PROP_TOUCH_TWEAKS) == "1"
     }
 
     // Power Tweaks Switch State
@@ -128,7 +141,8 @@ class KernelFragment : Fragment() {
     // lawRun Not Available
     private fun disableProfileScreen() {
         layout.switchZram.visibility = View.GONE
-        layout.switchTouchTweaks.visibility = View.GONE
+        layout.switchIoTweaks.visibility = View.GONE
+        layout.switchRAMTweaks.visibility = View.GONE
         layout.switchPowerTweaks.visibility = View.GONE
         layout.switchSystemTweaks.visibility = View.GONE
     }
@@ -139,7 +153,8 @@ class KernelFragment : Fragment() {
         resetColors()
         getDT2W()
         getZramTweaks()
-        getTouchTweaks()
+        getIoTweaks()
+        getRAMTweaks()
         getPowerTweaks()
         getSystemTweaks()
     }

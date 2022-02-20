@@ -99,48 +99,6 @@
 
     <androidx.cardview.widget.CardView
 
-        android:id="@+id/card_touch_tweaks"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/primary_padding"
-        app:cardBackgroundColor="@color/primary_dark"
-        app:cardCornerRadius="@dimen/card_radius">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/primary_padding">
-
-            <TextView
-                android:id="@+id/tv_touch_tweaks"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Touch Tweaks"
-                android:textColor="@color/e_balance_2800ma"
-                android:textSize="@dimen/text_medium"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switch_touch_tweaks"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/primary_padding"
-                android:text="Improve touch latency *Reboot Required*"
-                android:textColor="@color/text_dark"
-                android:textSize="@dimen/text_small"
-                app:layout_constraintTop_toBottomOf="@+id/tv_touch_tweaks" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-
         android:id="@+id/card_power_tweaks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -183,7 +141,7 @@
 
     <androidx.cardview.widget.CardView
 
-        android:id="@+id/card_system_tweaks"
+        android:id="@+id/card_Io_tweaks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/primary_padding"
@@ -196,17 +154,17 @@
             android:padding="@dimen/primary_padding">
 
             <TextView
-                android:id="@+id/tv_system_tweaks"
+                android:id="@+id/tv_Io_tweaks"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="System Tweaks"
+                android:text="i/O Tweaks"
                 android:textColor="@color/e_balance_2800ma"
                 android:textSize="@dimen/text_medium"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switch_system_tweaks"
+                android:id="@+id/switch_Io_tweaks"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -216,11 +174,95 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/primary_padding"
-                android:text="Some build tweaks *Reboot Required*"
+                android:text="i/o tweaks  *reapply current profile*"
                 android:textColor="@color/text_dark"
                 android:textSize="@dimen/text_small"
-                app:layout_constraintTop_toBottomOf="@+id/tv_system_tweaks" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_Io_tweaks" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/card_RAM_tweaks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/primary_padding"
+            app:cardBackgroundColor="@color/primary_dark"
+            app:cardCornerRadius="@dimen/card_radius">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/primary_padding">
+
+                <TextView
+                    android:id="@+id/tv_RAM_tweaks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RAM Tweaks"
+                    android:textColor="@color/e_balance_2800ma"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_RAM_tweaks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/primary_padding"
+                    android:text="Better Ram Management *Reboot Required*"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_RAM_tweaks" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/card_system_tweaks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/primary_padding"
+            app:cardBackgroundColor="@color/primary_dark"
+            app:cardCornerRadius="@dimen/card_radius">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/primary_padding">
+
+                <TextView
+                    android:id="@+id/tv_system_tweaks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prop Tweaks (Beta)"
+                    android:textColor="@color/e_balance_2800ma"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_system_tweaks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/primary_padding"
+                    android:text="Some build tweaks *Reboot Required*"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_system_tweaks" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 </LinearLayout>
     </ScrollView>
