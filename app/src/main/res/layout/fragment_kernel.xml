@@ -90,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/primary_padding"
-                android:text="An extra 4G virtual Ram for best ram management *Reboot Required*"
+                android:text="An extra 4G virtual Ram (Reboot Required)"
                 android:textColor="@color/text_dark"
                 android:textSize="@dimen/text_small"
                 app:layout_constraintTop_toBottomOf="@+id/tv_zram" />
@@ -132,7 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/primary_padding"
-                android:text="Improve touch latency *Reboot Required*"
+                android:text="Improve touch latency (Reboot Required)"
                 android:textColor="@color/text_dark"
                 android:textSize="@dimen/text_small"
                 app:layout_constraintTop_toBottomOf="@+id/tv_touch_tweaks" />
@@ -174,7 +174,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/primary_padding"
-                android:text="Improve Performance *Reboot Required*"
+                android:text="Improve Performance (Reboot Required)"
                 android:textColor="@color/text_dark"
                 android:textSize="@dimen/text_small"
                 app:layout_constraintTop_toBottomOf="@+id/tv_power_tweaks" />
@@ -216,10 +216,94 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/primary_padding"
-                android:text="Some build tweaks *Reboot Required*"
+                android:text="Some build tweaks (Reboot Required)"
                 android:textColor="@color/text_dark"
                 android:textSize="@dimen/text_small"
                 app:layout_constraintTop_toBottomOf="@+id/tv_system_tweaks" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/card_io_tweaks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/primary_padding"
+        app:cardBackgroundColor="@color/primary_dark"
+        app:cardCornerRadius="@dimen/card_radius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/primary_padding">
+
+            <TextView
+                android:id="@+id/tv_io_tweaks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I/O Tweaks (Beta)"
+                android:textColor="@color/e_balance_2800ma"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_io_tweaks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/primary_padding"
+                android:text="From its name (Reapply Profile)"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintTop_toBottomOf="@+id/tv_io_tweaks" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/card_ram_tweaks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/primary_padding"
+        app:cardBackgroundColor="@color/primary_dark"
+        app:cardCornerRadius="@dimen/card_radius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/primary_padding">
+
+            <TextView
+                android:id="@+id/tv_ram_tweaks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ram Tweaks"
+                android:textColor="@color/e_balance_2800ma"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_ram_tweaks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/primary_padding"
+                android:text="Better Ram Management (Reapply Profile)"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ram_tweaks" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
