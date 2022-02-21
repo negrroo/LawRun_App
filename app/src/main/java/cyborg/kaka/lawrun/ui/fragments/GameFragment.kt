@@ -30,13 +30,6 @@ class GameFragment : Fragment() {
     ): View {
         layout = FragmentGameBinding.inflate(inflater, container, false)
 
-        // Game Tweaks Switch Listener
-        layout.switchGameTweaks.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) Utils.setProp(Constants.PROP_GAME_TWEAKS, "1")
-            else Utils.setProp(Constants.PROP_GAME_TWEAKS, "0")
-            getGameTweaks()
-        }
-
         // HDR Extreme Switch Listener
         layout.switchHdrExtreme.setOnCheckedChangeListener { _, isChecked ->
             if (Utils.rootCheck(activity)) {
@@ -63,6 +56,27 @@ class GameFragment : Fragment() {
             getHDRExtreme() // Update HDR Extreme Switch State
         }
 
+        // Gpu Tweaks Switch Listener
+        layout.switchGpuTweaks.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) Utils.setProp(Constants.PROP_GPU_TWEAKS, "1")
+            else Utils.setProp(Constants.PROP_GPU_TWEAKS, "0")
+            getGpuTweaks()
+        }
+
+        // Thermal Tweaks Switch Listener
+        layout.switchThermalTweaks.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) Utils.setProp(Constants.PROP_THERMAL_TWEAKS, "1")
+            else Utils.setProp(Constants.PROP_THERMAL_TWEAKS, "0")
+            getThermalTweaks()
+        }
+
+        // K Tweaks Switch Listener
+        layout.switchKTweaks.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) Utils.setProp(Constants.PROP_K_TWEAKS, "1")
+            else Utils.setProp(Constants.PROP_K_TWEAKS, "0")
+            getKTweaks()
+        }
+
         // Check LawRun Support
         if (Utils.getProp(Constants.PROP_LAWRUN_SUPPORT) != "1") {
             disableProfileScreen()
@@ -81,13 +95,10 @@ class GameFragment : Fragment() {
             colorHolder.textColors.defaultColor // Applied Profile Color From Main Activity
 
         // Change Card Title Colors To Theme
-        layout.tvGameTweaks.setTextColor(themeColor) // Game Tweaks Card Title Color
         layout.tvHdrExtreme.setTextColor(themeColor) // HDR Extreme Card Title Color
-    }
-
-    // Game Tweaks Switch State
-    private fun getGameTweaks() {
-        layout.switchGameTweaks.isChecked = Utils.getProp(Constants.PROP_GAME_TWEAKS) == "1"
+        layout.tvGpuTweaks.setTextColor(themeColor) // Gpu Tweaks Card Title Color
+        layout.tvThermalTweaks.setTextColor(themeColor) // Thermal Tweaks Card Title Color
+        layout.tvKTweaks.setTextColor(themeColor) // K Tweaks Card Title Color
     }
 
     // HDR Extreme Switch State
@@ -107,17 +118,36 @@ class GameFragment : Fragment() {
         layout.switchHdrExtreme.isChecked = false // HDR Extreme Switch State Off
     }
 
+    // Gpu Tweaks Switch State
+    private fun getGpuTweaks() {
+        layout.switchGpuTweaks.isChecked = Utils.getProp(Constants.PROP_GPU_TWEAKS) == "1"
+    }
+
+    // Thermal Tweaks Switch State
+    private fun getThermalTweaks() {
+        layout.switchThermalTweaks.isChecked = Utils.getProp(Constants.PROP_THERMAL_TWEAKS) == "1"
+    }
+
+    // K Tweaks Switch State
+    private fun getKTweaks() {
+        layout.switchKTweaks.isChecked = Utils.getProp(Constants.PROP_K_TWEAKS) == "1"
+    }
+
     // lawRun Not Available
     private fun disableProfileScreen() {
-        layout.switchGameTweaks.visibility = View.GONE
         layout.switchHdrExtreme.visibility = View.GONE
+        layout.switchGpuTweaks.visibility = View.GONE
+        layout.switchThermalTweaks.visibility = View.GONE
+        layout.switchKTweaks.visibility = View.GONE
     }
 
     // Refresh Fragment
     override fun onStart() {
         super.onStart()
         resetColors() // Apply Current Profile Theme Color
-        getGameTweaks() // Update Game Tweaks Switch State
         getHDRExtreme() // Update HDR Extreme Switch State
+        getGpuTweaks() // Update Gpu Tweaks Switch State
+        getThermalTweaks() // Update Thermal Tweaks Switch State
+        getKTweaks() // Update K Tweaks Switch State
     }
 }
