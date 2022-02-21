@@ -68,6 +68,20 @@ class KernelFragment : Fragment() {
             getSystemTweaks()
         }
 
+        // I/O Tweaks Switch Listener
+        layout.switchIoTweaks.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) Utils.setProp(Constants.PROP_IO_TWEAKS, "1")
+            else Utils.setProp(Constants.PROP_IO_TWEAKS, "0")
+            getIoTweaks()
+        }
+
+        // Ram Tweaks Switch Listener
+        layout.switchRamTweaks.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) Utils.setProp(Constants.PROP_RAM_TWEAKS, "1")
+            else Utils.setProp(Constants.PROP_RAM_TWEAKS, "0")
+            getRamTweaks()
+        }
+
         // Check LawRun Support
         if (getProp(PROP_LAWRUN_SUPPORT) != "1") {
             disableProfileScreen()
@@ -89,6 +103,8 @@ class KernelFragment : Fragment() {
         layout.tvTouchTweaks.setTextColor(themeColor)
         layout.tvPowerTweaks.setTextColor(themeColor)
         layout.tvSystemTweaks.setTextColor(themeColor)
+        layout.tvIoTweaks.setTextColor(themeColor)
+        layout.tvRamTweaks.setTextColor(themeColor)
     }
 
 
@@ -125,12 +141,24 @@ class KernelFragment : Fragment() {
         layout.switchSystemTweaks.isChecked = Utils.getProp(Constants.PROP_SYSTEM_TWEAKS) == "1"
     }
 
+    // I/O Tweaks Switch State
+    private fun getIoTweaks() {
+        layout.switchIoTweaks.isChecked = Utils.getProp(Constants.PROP_IO_TWEAKS) == "1"
+    }
+
+    // Ram Tweaks Switch State
+    private fun getRamTweaks() {
+        layout.switchRamTweaks.isChecked = Utils.getProp(Constants.PROP_RAM_TWEAKS) == "1"
+    }
+
     // lawRun Not Available
     private fun disableProfileScreen() {
         layout.switchZram.visibility = View.GONE
         layout.switchTouchTweaks.visibility = View.GONE
         layout.switchPowerTweaks.visibility = View.GONE
         layout.switchSystemTweaks.visibility = View.GONE
+        layout.switchIoTweaks.visibility = View.GONE
+        layout.switchRamTweaks.visibility = View.GONE
     }
 
     // Refresh Fragment
@@ -142,5 +170,7 @@ class KernelFragment : Fragment() {
         getTouchTweaks()
         getPowerTweaks()
         getSystemTweaks()
+        getIoTweaks()
+        getRamTweaks()
     }
 }
