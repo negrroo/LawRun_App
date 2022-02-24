@@ -17,6 +17,10 @@ import cyborg.kaka.lawrun.R
 import cyborg.kaka.lawrun.databinding.FragmentStatsBinding
 import cyborg.kaka.lawrun.services.FPS
 import cyborg.kaka.lawrun.services.FPSTile
+import cyborg.kaka.lawrun.utils.Constants
+import cyborg.kaka.lawrun.utils.Utils
+import cyborg.kaka.lawrun.utils.Constants.PROP_LAWRUN_SUPPORT
+import cyborg.kaka.lawrun.utils.Utils.getProp
 
 
 class StatsFragment : Fragment() {
@@ -61,6 +65,11 @@ class StatsFragment : Fragment() {
             layout.switchBatteryMonitor.isChecked = false
         }
 
+        // Check LawRun Support
+        if (getProp(PROP_LAWRUN_SUPPORT) != "1") {
+            disableProfileScreen()
+        }
+
         return layout.root
     }
 
@@ -89,6 +98,10 @@ class StatsFragment : Fragment() {
             }
         }
         return false
+    }
+
+    // lawRun Not Available
+    private fun disableProfileScreen() {
     }
 
     // Refresh Fragment
