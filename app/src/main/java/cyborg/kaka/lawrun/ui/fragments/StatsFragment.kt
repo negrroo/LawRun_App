@@ -65,6 +65,13 @@ class StatsFragment : Fragment() {
             layout.switchBatteryMonitor.isChecked = false
         }
 
+        // Best Tweaks Switch Listener
+        layout.switchBestTweaks.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) Utils.setProp(Constants.PROP_BEST_TWEAKS, "1")
+            else Utils.setProp(Constants.PROP_BEST_TWEAKS, "0")
+            getBestTweaks()
+        }
+
         // Check LawRun Support
         if (getProp(PROP_LAWRUN_SUPPORT) != "1") {
             disableProfileScreen()
@@ -81,6 +88,7 @@ class StatsFragment : Fragment() {
         val themeColor = colorHolder.textColors.defaultColor
         layout.tvFpsMeterTitle.setTextColor(themeColor)
         layout.tvBatteryMonitor.setTextColor(themeColor)
+        layout.tvBestTweaks.setTextColor(themeColor)
     }
 
     // Get FPS Running
@@ -100,8 +108,14 @@ class StatsFragment : Fragment() {
         return false
     }
 
+    // Best Tweaks Switch State
+    private fun getBestTweaks() {
+        layout.switchBestTweaks.isChecked = Utils.getProp(Constants.PROP_BEST_TWEAKS) == "1"
+    }
+
     // lawRun Not Available
     private fun disableProfileScreen() {
+        layout.switchBestTweaks.visibility = View.GONE
     }
 
     // Refresh Fragment
@@ -109,6 +123,7 @@ class StatsFragment : Fragment() {
         super.onStart()
         resetColors()
         getFPSMeter()
+        getBestTweaks()
     }
 
 }

@@ -13,6 +13,9 @@ object Constants {
     const val PROP_APPLIED_PROFILE = "persist.lawrun.profile"
 
     // Kernel
+    const val PROP_BEST_TWEAKS = "persist.lawrun.best_tweaks"
+
+    // Kernel
     const val DT2W_FILE = "/proc/touchpanel/gesture_enable"
 
     const val PROP_ZRAM_TWEAKS = "persist.lawrun.zram_tweaks"
