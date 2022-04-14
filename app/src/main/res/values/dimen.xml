@@ -10,6 +10,8 @@
     <dimen name="tab_indicator_height">2dp</dimen>
     <dimen name="tab_indicator_width">40dp</dimen>
 
+    <dimen name="text_header">35sp</dimen>
+    <dimen name="text_no_profile">22sp</dimen>
     <dimen name="text_large">26sp</dimen>
     <dimen name="text_medium">18sp</dimen>
     <dimen name="text_small">16sp</dimen>

@@ -3,6 +3,7 @@ package cyborg.kaka.lawrun.ui.fragments
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.IntentFilter
+import android.graphics.PorterDuff
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
 import android.net.Uri
@@ -13,6 +14,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.annotation.ColorRes
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.topjohnwu.superuser.internal.Utils
 import cyborg.kaka.lawrun.BuildConfig
@@ -33,6 +36,9 @@ import kotlin.math.abs
 
 
 class ProfilesFragment : Fragment() {
+
+    fun ImageView.setSvgColor(@ColorRes color: Int) =
+        setColorFilter(ContextCompat.getColor(context, color), PorterDuff.Mode.SRC_IN)
 
     lateinit var layout: FragmentProfilesBinding // ViewBinding
 
@@ -196,31 +202,36 @@ class ProfilesFragment : Fragment() {
                 themeColor = activity!!.getColor(R.color.battery_1800ma)
                 layout.cardBattery.setCardBackgroundColor(themeColor)
                 layout.tvBattery.setTextColor(defaultDarkColor)
-                tabHeart.setImageResource(R.mipmap.ic_heart_battery)
+//                tabHeart.setImageResource(R.mipmap.ic_heart_battery)
+                tabHeart.setSvgColor(R.color.battery_1800ma)
             }
             PROFILE_BALANCE.toString() -> {
                 themeColor = activity!!.getColor(R.color.balance_2300ma)
                 layout.cardBalance.setCardBackgroundColor(themeColor)
                 layout.tvBalance.setTextColor(defaultDarkColor)
-                tabHeart.setImageResource(R.mipmap.ic_heart_balance)
+//                tabHeart.setImageResource(R.mipmap.ic_heart_balance)
+                tabHeart.setSvgColor(R.color.balance_2300ma)
             }
             PROFILE_EXTRA_BALANCE.toString() -> {
                 themeColor = activity!!.getColor(R.color.e_balance_2800ma)
                 layout.cardEbalance.setCardBackgroundColor(themeColor)
                 layout.tvEbalance.setTextColor(defaultDarkColor)
-                tabHeart.setImageResource(R.mipmap.ic_heart_ebalance)
+//                tabHeart.setImageResource(R.mipmap.ic_heart_ebalance)
+                tabHeart.setSvgColor(R.color.e_balance_2800ma)
             }
             PROFILE_PERFORMANCE.toString() -> {
                 themeColor = activity!!.getColor(R.color.performance_3300ma)
                 layout.cardPerformance.setCardBackgroundColor(themeColor)
                 layout.tvPerformance.setTextColor(defaultDarkColor)
-                tabHeart.setImageResource(R.mipmap.ic_heart_performance)
+//                tabHeart.setImageResource(R.mipmap.ic_heart_performance)
+                tabHeart.setSvgColor(R.color.performance_3300ma)
             }
             PROFILE_GAMING.toString() -> {
                 themeColor = activity!!.getColor(R.color.gaming_3500ma)
                 layout.cardGaming.setCardBackgroundColor(themeColor)
                 layout.tvGaming.setTextColor(defaultDarkColor)
-                tabHeart.setImageResource(R.mipmap.ic_heart_gaming)
+//                tabHeart.setImageResource(R.mipmap.ic_heart_gaming)
+                tabHeart.setSvgColor(R.color.gaming_3500ma)
             }
         }
 

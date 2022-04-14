@@ -202,10 +202,11 @@
             android:id="@+id/profiles_not_supported"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:padding="@dimen/primary_padding"
             android:text="@string/profile_not_supported_msg"
-            android:textColor="@color/text_dark"
-            android:textSize="@dimen/text_large"
+            android:textColor="@color/gaming_3500ma"
+            android:textSize="@dimen/text_no_profile"
             android:visibility="gone" />
 
         <androidx.cardview.widget.CardView
@@ -277,7 +278,8 @@
                         android:layout_marginHorizontal="@dimen/primary_padding"
                         android:text="@string/battery"
                         android:textColor="@color/battery_1800ma"
-                        android:textSize="@dimen/text_large" />
+                        android:textSize="@dimen/text_large"
+                        android:fontFamily="@font/road_rage" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -306,7 +308,8 @@
                         android:layout_marginHorizontal="@dimen/primary_padding"
                         android:text="@string/balance"
                         android:textColor="@color/balance_2300ma"
-                        android:textSize="@dimen/text_large" />
+                        android:textSize="@dimen/text_large"
+                        android:fontFamily="@font/road_rage" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -335,7 +338,8 @@
                         android:layout_marginHorizontal="@dimen/primary_padding"
                         android:text="@string/extra_balance"
                         android:textColor="@color/e_balance_2800ma"
-                        android:textSize="@dimen/text_large" />
+                        android:textSize="@dimen/text_large"
+                        android:fontFamily="@font/road_rage" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -364,7 +368,8 @@
                         android:layout_marginHorizontal="@dimen/primary_padding"
                         android:text="@string/performance"
                         android:textColor="@color/performance_3300ma"
-                        android:textSize="@dimen/text_large" />
+                        android:textSize="@dimen/text_large"
+                        android:fontFamily="@font/road_rage" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -393,7 +398,8 @@
                         android:layout_marginHorizontal="@dimen/primary_padding"
                         android:text="@string/gaming"
                         android:textColor="@color/gaming_3500ma"
-                        android:textSize="@dimen/text_large" />
+                        android:textSize="@dimen/text_large"
+                        android:fontFamily="@font/road_rage" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
