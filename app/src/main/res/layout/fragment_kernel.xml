@@ -132,7 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/primary_padding"
-                android:text="Improve touch latency (Reboot Required)"
+                android:text="Improve touch latency (Reapply Profile)"
                 android:textColor="@color/text_dark"
                 android:textSize="@dimen/text_small"
                 app:layout_constraintTop_toBottomOf="@+id/tv_touch_tweaks" />
@@ -174,7 +174,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/primary_padding"
-                android:text="Improve Performance (Reboot Required)"
+                android:text="Improve Performance (Reapply Profile)"
                 android:textColor="@color/text_dark"
                 android:textSize="@dimen/text_small"
                 app:layout_constraintTop_toBottomOf="@+id/tv_power_tweaks" />
@@ -216,7 +216,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/primary_padding"
-                android:text="Some build tweaks (Reboot Required)"
+                android:text="Some build tweaks (Reapply Profile)"
                 android:textColor="@color/text_dark"
                 android:textSize="@dimen/text_small"
                 app:layout_constraintTop_toBottomOf="@+id/tv_system_tweaks" />
